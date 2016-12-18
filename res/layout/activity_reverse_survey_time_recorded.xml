@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.subsurvey.reverseSurvey.ui.ReverseSurveyTimeRecordedActivity">
+
+
+    <ListView
+        android:id="@+id/rsDataPerLV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/rsAddRL" />
+
+    <RelativeLayout
+        android:id="@+id/rsAddRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/rsDataPerLV"
+        android:layout_alignStart="@+id/rsDataPerLV">
+
+        <ImageView
+            android:id="@+id/rsAddOneIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="38dp"
+            android:src="@drawable/add_one_selector" />
+
+        <ImageView
+            android:id="@+id/rsAddTwoIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/add_two_selector" />
+
+        <ImageView
+            android:id="@+id/rsAddFiveIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="18dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/add_five_selector" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/wstStartLineRL"
+            style="@style/settingStyle"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wstStartLineTagTV"
+                style="@style/psTvStyleTag"
+                android:text="始线路" />
+
+            <ImageView
+                android:id="@+id/wstStartLineIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wstStartLineTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wstStartLineIV"
+                android:text="" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wstStartLineStartDireRL"
+            style="@style/settingStyle"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wstStartLineStartDireTagTV"
+                style="@style/psTvStyleTag"
+                android:text="始线路始方向" />
+
+            <ImageView
+                android:id="@+id/wstStartLineStartDireIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wstStartLineStartDireTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wstStartLineStartDireIV"
+                android:text="" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wstStartLineEndDireRL"
+            style="@style/settingStyle"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wstStartLineEndDireTagTV"
+                style="@style/psTvStyleTag"
+                android:text="始线路终方向" />
+
+            <ImageView
+                android:id="@+id/wstStartLineEndDireIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wstStartLineEndDireTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wstStartLineEndDireIV"
+                android:text="" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wstEndLineRL"
+            style="@style/settingStyle"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wstEndLineTagTV"
+                style="@style/psTvStyleTag"
+                android:text="终线路" />
+
+            <ImageView
+                android:id="@+id/wstEndLineIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wstEndLineTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wstEndLineIV"
+                android:text="" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wstEndLineStartDireRL"
+            style="@style/settingStyle"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wstEndLineStartDireTagTV"
+                style="@style/psTvStyleTag"
+                android:text="终线路始方向" />
+
+            <ImageView
+                android:id="@+id/wstEndLineStartDireIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wstEndLineStartDireTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wstEndLineStartDireIV"
+                android:text="" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wstEndLineEndDireRL"
+            style="@style/settingStyle"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wstEndLineEndDireTagTV"
+                style="@style/psTvStyleTag"
+                android:text="终线路终方向" />
+
+            <ImageView
+                android:id="@+id/wstEndLineEndDireIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wstEndLineEndDireTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wstEndLineEndDireIV"
+                android:text="" />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

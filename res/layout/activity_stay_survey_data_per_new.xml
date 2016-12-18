@@ -1,0 +1,485 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ODSurveyDataPerNewActivity" >
+
+<ScrollView
+        android:id="@+id/ssScrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+	        <RelativeLayout
+	            android:id="@+id/ssPerGointoStationRL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerGointoStationTagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="进站刷卡时刻" />
+	
+	            <ImageView
+	                android:id="@+id/ssPerGointoStationIV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerGointoStationTV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerGointoStationIV" />
+	        </RelativeLayout>
+	        
+	        <RelativeLayout
+	            android:id="@+id/ssPerGetoffRL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerGetoffTagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="换乘下车时刻" />
+	
+	            <ImageView
+	                android:id="@+id/ssPerGetoffIV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerGetoffTV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerGetoffIV" />
+	        </RelativeLayout>
+
+			<RelativeLayout
+	            android:id="@+id/ssPerArrivePlatformRL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerArrivePlatformTagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="到达站台时刻" />
+	
+	            <ImageView
+	                android:id="@+id/ssPerArrivePlatformIV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerArrivePlatformTV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerArrivePlatformIV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerOrignLineNumRL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerOrignLineNumTagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="起始排队人数" />
+	
+	            <ImageView
+	                android:id="@+id/ssPerOrignLineNumIV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerOrignLineNumTV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerOrignLineNumIV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerGetOffNum1RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOffNum1TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第一班车下车人数" />
+	
+	            <ImageView
+	                android:id="@+id/ssPerGetOffNum1IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOffNum1TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerGetOffNum1IV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerGetOnNum1RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOnNum1TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第一班车上车人数" />
+	
+	            <ImageView
+	                android:id="@+id/ssPerGetOnNum1IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOnNum1TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerGetOnNum1IV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerTrainStartTime1RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerTrainStartTime1TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第一班车开车时刻" />
+	
+	            <ImageView                 
+	            	android:id="@+id/ssPerTrainStartTime1IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerTrainStartTime1TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerTrainStartTime1IV" />
+	        </RelativeLayout>
+    
+			
+			<RelativeLayout
+	            android:id="@+id/ssPerGetOffNum2RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOffNum2TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第二班车下车人数" />
+	
+	            <ImageView
+	                android:id="@+id/ssPerGetOffNum2IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOffNum2TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerGetOffNum2IV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerGetOnNum2RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOnNum2TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第二班车上车人数" />
+	
+	            <ImageView
+	                android:id="@+id/ssPerGetOnNum2IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOnNum2TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerGetOnNum2IV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerTrainStartTime2RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerTrainStartTime2TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第二班车开车时刻" />
+	
+	            <ImageView                 
+	            	android:id="@+id/ssPerTrainStartTime2IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerTrainStartTime2TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerTrainStartTime2IV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerGetOffNum3RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOffNum3TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第三班车下车人数" />
+	
+	            <ImageView
+	                android:id="@+id/ssPerGetOffNum3IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOffNum3TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerGetOffNum3IV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerGetOnNum3RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOnNum3TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第三班车上车人数" />
+	
+	            <ImageView
+	                android:id="@+id/ssPerGetOnNum3IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOnNum3TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerGetOnNum3IV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerTrainStartTime3RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerTrainStartTime3TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第三班车开车时刻" />
+	
+	            <ImageView                 
+	            	android:id="@+id/ssPerTrainStartTime3IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerTrainStartTime3TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerTrainStartTime3IV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerGetOffNum4RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOffNum4TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第四班车下车人数" />
+	
+	            <ImageView
+	                android:id="@+id/ssPerGetOffNum4IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOffNum4TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerGetOffNum4IV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerGetOnNum4RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOnNum4TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第四班车上车人数" />
+	
+	            <ImageView
+	                android:id="@+id/ssPerGetOnNum4IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOnNum4TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerGetOnNum4IV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerTrainStartTime4RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerTrainStartTime4TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第四班车开车时刻" />
+	
+	            <ImageView                 
+	            	android:id="@+id/ssPerTrainStartTime4IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerTrainStartTime4TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerTrainStartTime4IV" />
+	        </RelativeLayout>
+			
+			
+			<RelativeLayout
+	            android:id="@+id/ssPerGetOffNum5RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOffNum5TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第五班车下车人数" />
+	
+	            <ImageView
+	                android:id="@+id/ssPerGetOffNum5IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOffNum5TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerGetOffNum5IV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerGetOnNum5RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOnNum5TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第五班车上车人数" />
+	
+	            <ImageView
+	                android:id="@+id/ssPerGetOnNum5IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOnNum5TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerGetOnNum5IV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerTrainStartTime5RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerTrainStartTime5TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第五班车开车时刻" />
+	
+	            <ImageView                 
+	            	android:id="@+id/ssPerTrainStartTime5IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerTrainStartTime5TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerTrainStartTime5IV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerGetOffNum6RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOffNum6TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第六班车下车人数" />
+	
+	            <ImageView
+	                android:id="@+id/ssPerGetOffNum6IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOffNum6TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerGetOffNum6IV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerGetOnNum6RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOnNum6TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第六班车上车人数" />
+	
+	            <ImageView
+	                android:id="@+id/ssPerGetOnNum6IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerGetOnNum6TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerGetOnNum6IV" />
+	        </RelativeLayout>
+	        
+			<RelativeLayout
+	            android:id="@+id/ssPerTrainStartTime6RL"
+	            style="@style/settingStyle"
+	            android:layout_width="match_parent"
+	            android:clickable="true" >
+	
+	            <TextView
+	                android:id="@+id/ssPerTrainStartTime6TagTV"
+	                style="@style/psTvStyleTag"
+	                android:text="第六班车开车时刻" />
+	
+	            <ImageView                 
+	            	android:id="@+id/ssPerTrainStartTime6IV"
+	                style="@style/psIvStyle" />
+	
+	            <TextView
+	                android:id="@+id/ssPerTrainStartTime6TV"
+	                style="@style/psTvStyle"
+	                android:layout_toLeftOf="@+id/ssPerTrainStartTime6IV" />
+	        </RelativeLayout>
+			
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

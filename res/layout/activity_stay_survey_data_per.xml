@@ -1,0 +1,606 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_backgroud"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".WalkSurveyDataPerActivity" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/saveSurveyDataIV"
+        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/saveSurveyDataIV"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ssGoinStationTimeRL" >
+
+                <TextView
+                    android:id="@+id/ssGoinStationTimeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="进站刷卡时刻："
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageView
+                    android:id="@+id/ssGoinStationTimeReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/reset_survey" />
+
+                <EditText
+                    android:id="@+id/ssGoinStationTimeET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_toLeftOf="@+id/ssGoinStationTimeReset"
+                    android:layout_toRightOf="@+id/ssGoinStationTimeTV"
+                     >
+
+                    <requestFocus />
+                </EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ssTransferTimeRL" >
+
+                <TextView
+                    android:id="@+id/ssTransferTimeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="换乘下车时刻："
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageView
+                    android:id="@+id/ssTransferTimeReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/reset_survey" />
+
+                <EditText
+                    android:id="@+id/ssTransferTimeET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/ssTransferTimeTV"
+                    android:layout_toLeftOf="@+id/ssTransferTimeReset"
+                     />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/ssArrivePlatformTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="到达站台时刻："
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageView
+                    android:id="@+id/ssArrivePlatformReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/reset_survey" />
+
+                <EditText
+                    android:id="@+id/ssArrivePlatformET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/ssArrivePlatformReset"
+                    android:layout_toRightOf="@+id/ssArrivePlatformTV"
+                     />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/ssLinePersonCountTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="起始排队人数："
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ssLinePersonCountET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/ssLinePersonCountTV" />
+
+            </RelativeLayout>
+
+            <RelativeLayout 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content" 
+                android:layout_marginTop="15dp"
+                android:id="@+id/ssNo1StartTimeRL">
+                <TextView android:id="@+id/ssNo1StartTimeTV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:gravity="center_vertical" android:text="第一班车发车时刻：" android:textAppearance="?android:attr/textAppearanceMedium"/>
+                <ImageView android:id="@+id/ssNo1StartTimeReset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:gravity="center_vertical" android:src="@drawable/reset_survey"/>
+                <EditText android:id="@+id/ssNo1StartTimeET" 
+                    style="@style/SurveyEditTextStyle" 
+                    android:layout_alignParentTop="true" 
+                    android:layout_toRightOf="@+id/ssNo1StartTimeTV" 
+                    android:layout_toLeftOf="@+id/ssNo1StartTimeReset"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ssNo1GetonNumRL" >
+
+                <TextView
+                    android:id="@+id/ssNo1GetonNumTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="上车人数"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ssNo1GetonNumET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo1GetonNumTV"
+                    android:ems="4"
+                     />
+
+                <TextView
+                    android:id="@+id/ssNo1GetoffNumTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo1GetonNumET"
+                    android:gravity="center_vertical"
+                    android:text="下车人数"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ssNo1GetoffNumET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo1GetoffNumTV"
+                    android:ems="4"
+                     />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/ssNo2StartTimeRL" >
+
+                <TextView
+                    android:id="@+id/ssNo2StartTimeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="第二班车发车时刻："
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageView
+                    android:id="@+id/ssNo2StartTimeReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/reset_survey" />
+
+                <EditText
+                    android:id="@+id/ssNo2StartTimeET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/ssNo2StartTimeTV"
+                    android:layout_toLeftOf="@+id/ssNo2StartTimeReset"
+                     />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/ssNo2GetonNumRL" >
+
+                <TextView
+                    android:id="@+id/ssNo2GetonNumTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="上车人数"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ssNo2GetonNumET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo2GetonNumTV"
+                     />
+
+                <TextView
+                    android:id="@+id/ssNo2GetoffNumTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo2GetonNumET"
+                    android:gravity="center_vertical"
+                    android:text="下车人数"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ssNo2GetoffNumET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo2GetoffNumTV"
+                     />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/ssNo3StartTimeRL" >
+
+                <TextView
+                    android:id="@+id/ssNo3StartTimeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="第三班车发车时刻："
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageView
+                    android:id="@+id/ssNo3StartTimeReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/reset_survey" />
+
+                <EditText
+                    android:id="@+id/ssNo3StartTimeET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/ssNo3StartTimeTV"
+                    android:layout_toLeftOf="@+id/ssNo3StartTimeReset"
+                     />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/ssNo3GetonNumRL" >
+
+                <TextView
+                    android:id="@+id/ssNo3GetonNumTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="上车人数"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ssNo3GetonNumET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo3GetonNumTV"
+                     />
+
+                <TextView
+                    android:id="@+id/ssNo3GetoffNumTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo3GetonNumET"
+                    android:gravity="center_vertical"
+                    android:text="下车人数"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ssNo3GetoffNumET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo3GetoffNumTV"
+                     />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/ssNo4StartTimeRL" >
+
+                <TextView
+                    android:id="@+id/ssNo4StartTimeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="第四班车发车时刻："
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageView
+                    android:id="@+id/ssNo4StartTimeReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/reset_survey" />
+
+                <EditText
+                    android:id="@+id/ssNo4StartTimeET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/ssNo4StartTimeTV"
+                    android:layout_toLeftOf="@+id/ssNo4StartTimeReset"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/ssNo4GetonNumRL" >
+
+                <TextView
+                    android:id="@+id/ssNo4GetonNumTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="上车人数"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ssNo4GetonNumET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo4GetonNumTV"
+                     />
+
+                <TextView
+                    android:id="@+id/ssNo4GetoffNumTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo4GetonNumET"
+                    android:gravity="center_vertical"
+                    android:text="下车人数"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ssNo4GetoffNumET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo4GetoffNumTV"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/ssNo5StartTimeRL" >
+
+                <TextView
+                    android:id="@+id/ssNo5StartTimeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="第五班车发车时刻："
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageView
+                    android:id="@+id/ssNo5StartTimeReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/reset_survey" />
+
+                <EditText
+                    android:id="@+id/ssNo5StartTimeET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/ssNo5StartTimeTV"
+                    android:layout_toLeftOf="@+id/ssNo5StartTimeReset"
+                     />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/ssNo5GetonNumRL" >
+
+                <TextView
+                    android:id="@+id/ssNo5GetonNumTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="上车人数"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ssNo5GetonNumET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo5GetonNumTV"
+                     />
+
+                <TextView
+                    android:id="@+id/ssNo5GetoffNumTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo5GetonNumET"
+                    android:gravity="center_vertical"
+                    android:text="下车人数"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ssNo5GetoffNumET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo5GetoffNumTV"
+                     />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/ssNo6StartTimeRL" >
+
+                <TextView
+                    android:id="@+id/ssNo6StartTimeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="第六班车发车时刻："
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageView
+                    android:id="@+id/ssNo6StartTimeReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/reset_survey" />
+
+                <EditText
+                    android:id="@+id/ssNo6StartTimeET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/ssNo6StartTimeTV"
+                    android:layout_toLeftOf="@+id/ssNo6StartTimeReset"
+                     />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/ssNo6GetonNumRL" >
+
+                <TextView
+                    android:id="@+id/ssNo6GetonNumTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="上车人数"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ssNo6GetonNumET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo6GetonNumTV"
+                    android:ems="4"
+                     />
+
+                <TextView
+                    android:id="@+id/ssNo6GetoffNumTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo6GetonNumET"
+                    android:gravity="center_vertical"
+                    android:text="下车人数"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ssNo6GetoffNumET"
+                    style="@style/SurveyEditTextStyle"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ssNo6GetoffNumTV"
+                    android:ems="4"
+                     />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/querySureyDataIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/scrollView1"
+        android:layout_alignTop="@+id/saveSurveyDataIV"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/query_survey_cn_selector" />
+
+    <ImageView
+        android:id="@+id/saveSurveyDataIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/scrollView1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/save_survey_cn_selector" />
+
+</RelativeLayout>

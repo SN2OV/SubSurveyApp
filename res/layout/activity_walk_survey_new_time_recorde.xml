@@ -1,0 +1,287 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".WalkSurveyNewTimeRecordeActivity" >
+
+    <LinearLayout
+        android:id="@+id/wsLL2"
+        android:layout_below="@+id/wsLL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+         <RelativeLayout
+            android:id="@+id/wsBagageRL"
+            android:layout_below="@+id/wsLL1"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            style = "@style/spinRLStyle">
+
+            <TextView
+                android:id="@+id/wsBagagePreTV"
+                android:text="行李"
+                style = "@style/spinTVTagStyle"
+             />
+
+            <TextView
+                android:id="@+id/wsBagageValueTV"
+                android:text="无行李"
+                android:layout_toRightOf="@+id/wsBagagePreTV"
+                style = "@style/spinTVValueStyle"
+                 />
+
+            <ImageButton
+                android:id="@+id/wsBagageValueIV"
+                style = "@style/spinIVStyle"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wsTelRL"
+            android:layout_below="@+id/wsLL1"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            style = "@style/spinRLStyle">
+
+            <TextView
+                android:id="@+id/wsTelPreTV"
+                android:text="手机"
+                style = "@style/spinTVTagStyle"
+                />
+
+            <TextView
+                android:id="@+id/wsTelValueTV"
+                android:text="未关注"
+                android:layout_toRightOf="@+id/wsTelPreTV"
+                style = "@style/spinTVValueStyle"
+                />
+
+            <ImageButton
+                android:id="@+id/wsTelValueIV"
+                style = "@style/spinIVStyle"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wsLL3"
+        android:layout_below="@+id/wsLL2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+         <RelativeLayout
+            android:id="@+id/wsLiftRL"
+            android:layout_below="@+id/wsLL2"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            style = "@style/spinRLStyle">
+
+            <TextView
+                android:id="@+id/wsLiftPreTV"
+                android:text="电梯"
+                style = "@style/spinTVTagStyle"
+             />
+
+            <TextView
+                android:id="@+id/wsLiftValueTV"
+                android:text="步梯"
+                android:layout_toRightOf="@+id/wsLiftPreTV"
+                style = "@style/spinTVValueStyle"
+                 />
+
+            <ImageButton
+                android:id="@+id/wsLiftValueIV"
+                style = "@style/spinIVStyle"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wsSpeedRL"
+            android:layout_below="@+id/wsLL2"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            style = "@style/spinRLStyle">
+
+            <TextView
+                android:id="@+id/wsSpeedPreTV"
+                android:text="速度"
+                style = "@style/spinTVTagStyle"
+                />
+
+            <TextView
+                android:id="@+id/wsSpeedValueTV"
+                android:text="快"
+                android:layout_toRightOf="@+id/wsSpeedPreTV"
+                style = "@style/spinTVValueStyle"
+                />
+
+            <ImageButton
+                android:id="@+id/wsSpeedValueIV"
+                style = "@style/spinIVStyle"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wsLL1"
+        android:layout_below="@+id/wsLineShowTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/wsAgeRL"
+            style="@style/spinRLStyle"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/wsAgePreTV"
+                style="@style/spinTVTagStyle"
+                android:text="年龄" />
+
+            <TextView
+                android:id="@+id/wsAgeValueTV"
+                style="@style/spinTVValueStyle"
+                android:layout_toRightOf="@+id/wsAgePreTV"
+                android:text="青年" />
+
+            <ImageButton
+                android:id="@+id/wsAgeValueIV"
+                style="@style/spinIVStyle" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wsSexRL"
+            style="@style/spinRLStyle"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/wsAgeRL"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/wsSexPreTV"
+                style="@style/spinTVTagStyle"
+                android:text="性别" />
+
+            <TextView
+                android:id="@+id/wsSexValueTV"
+                style="@style/spinTVValueStyle"
+                android:layout_toRightOf="@+id/wsSexPreTV"
+                android:text="男" />
+
+            <ImageButton
+                android:id="@+id/wsSexValueIV"
+                style="@style/spinIVStyle" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+     <RelativeLayout
+         android:id="@+id/wsRecordedRL"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_below="@+id/wsLL3"
+         android:layout_marginTop="10dp"
+         android:background="@drawable/record_background" >
+
+         <RelativeLayout
+             android:id="@+id/wsImagesRL"
+             android:layout_below="@+id/wsLastTimeRL"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" >
+
+             <ImageView
+                 android:id="@+id/startSurveyImageView"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_marginLeft="40dp"
+                 android:src="@drawable/start_survey" />
+
+             <ImageView
+                 android:id="@+id/searchSurveyImageView"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginRight="40dp"
+                 android:src="@drawable/search_survey" />
+         </RelativeLayout>
+
+         <RelativeLayout
+             android:id="@+id/wsTodoRL"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+             android:layout_marginTop="5dp" >
+
+             <TextView
+                 android:id="@+id/wsTodoNextTagTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:gravity="center"
+                 android:text="即将记录"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:id="@+id/wsTodoNextTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/wsTodoNextTagTV"
+                 android:layout_centerHorizontal="true"
+                 android:layout_centerVertical="true"
+                 android:text=""
+                 android:textColor="@color/themeBlue"
+                 android:textSize="40dp" />
+         </RelativeLayout>
+
+         <RelativeLayout
+             android:id="@+id/wsLastTimeRL"
+             android:layout_below="@+id/wsTodoRL"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" >
+
+             <TextView
+                 android:id="@+id/wsLastTimeTagTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:text="上一时刻"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:id="@+id/wsLastTimeTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/wsLastTimeTagTV"
+                 android:layout_centerHorizontal="true"
+                 android:textColor="@color/themeBlue"
+                 android:text=""
+                 android:textSize="40dp" />
+         </RelativeLayout>
+
+     </RelativeLayout>
+
+     <TextView
+         android:id="@+id/wsLineShowTV"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="1dp"
+         android:gravity="center"
+         android:text="进站：苹果园-四惠东"
+         android:textColor="@color/red"
+         android:textSize="18sp" />
+
+</RelativeLayout>

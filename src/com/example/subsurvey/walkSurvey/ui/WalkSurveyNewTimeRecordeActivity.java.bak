@@ -1,0 +1,585 @@
+package com.example.subsurvey.walkSurvey.ui;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+import butterknife.OnClick;
+
+import com.example.subsurvey.AppConfig;
+import com.example.subsurvey.AppContext;
+import com.example.subsurvey.R;
+import com.example.subsurvey.R.array;
+import com.example.subsurvey.R.id;
+import com.example.subsurvey.R.layout;
+import com.example.subsurvey.R.menu;
+import com.example.subsurvey.common.StringUtils;
+import com.example.subsurvey.common.SurveyUtils;
+import com.example.subsurvey.common.UIHelper;
+import com.example.subsurvey.old.WalkSurveyTimeRecordedActivity;
+import com.example.subsurvey.personalSetting.UserEntity;
+import com.example.subsurvey.walkSurvey.beans.WalkSurveyEntity;
+import com.example.subsurvey.walkSurvey.helper.WalkSurveyDataHelper;
+import com.example.subsurvey.widget.SpinerPopWindow;
+import com.example.subsurvey.widget.AbstractSpinerAdapter;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.support.v4.view.MenuItemCompat;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class WalkSurveyNewTimeRecordeActivity extends ActionBarActivity implements AbstractSpinerAdapter.IOnItemSelectListener {
+
+	private Context context;
+	private UserEntity user;
+	private AppContext appContext;
+	private SpinerPopWindow mSpinerPopWindow;
+	private List<String> ageList = new ArrayList<String>();
+	private List<String> bagageList = new ArrayList<String>();
+	private List<String> liftList = new ArrayList<String>();
+	private ArrayList<ArrayList<String>>timeDataArrTotal = new ArrayList<ArrayList<String>>();//时间数据
+	private ArrayList<String> tempArr = new ArrayList<String>();
+	private ArrayList<String> timeDataArrPer = new ArrayList<String>();
+	private SharedPreferences preferences;
+	//countFlag:调查类型某种类型次数序号 dataSum:总组数 fullFlag:分组结束标志
+	private int countFlag=0,transCountFlag=0,surveyTypeNo,dataSum=1,fullFlag=0;
+	//定义走行调查实体，用于将各种数据保存
+	public static WalkSurveyEntity walkSurveyEntity = new WalkSurveyEntity();
+	private boolean queryFlag = false,readyFlag=false,transReadyFlag=false;//标识一组数据完成情况 queryFlag标示，是否可以查询当前组数据;readyFlag为true时，下一次计时为该小组数据的结束
+	private boolean transResetFlag = false,inOutResetFlag = false;//transResetFlag标识换乘单组数据重置位置
+	private int rowID = 1,lineNo=0,transNo=0,transRowID=1,databaseRowID=1,gap=1,arrayFlag=0;//databaseRowID为数据库行数,flag仅用来帮助timeDataArrTotal填充数据
+	private String curTimeBackup;
+	
+	
+	@InjectView(R.id.wsAgePreTV)
+	TextView wsAgePreTV;
+	@InjectView(R.id.wsAgeValueTV)
+	TextView wsAgeValueTV;
+	@InjectView(R.id.wsBagageValueTV)
+	TextView wsBagageValueTV;
+	@InjectView(R.id.wsLiftValueTV)
+	TextView wsLiftValueTV;
+	@InjectView(R.id.wsLineShowTV)
+	TextView wsLineShowTV;
+	@InjectView(R.id.startSurveyImageView)
+	ImageView startSurveyImageView;
+	@InjectView(R.id.searchSurveyImageView)
+	ImageView searchSurveyImageView;
+	@InjectView(R.id.wsTodoNextTV)
+	TextView wsTodoNextTV;
+	@InjectView(R.id.wsLastTimeTV)
+	TextView wsLastTimeTV;
+
+		
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_walk_survey_new_time_recorde);
+		init();
+		initView();
+	}
+
+	
+	
+	@Override
+	protected void onResume() {
+		SurveyUtils.getWSLine(wsLineShowTV, user,lineNo);
+//		wsTodoNextTV.setText(AppConfig.wsTodoHints[surveyTypeNo][0]);
+		switch(surveyTypeNo){
+		case AppConfig.WS_GETON_NO:
+			WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setMachineLoc(user.getWsGateLoc());
+			WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setMachineLine(user.getWsGateLine());
+			WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setGetOnDire(user.getWsOnDire());
+			WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setGetOnLine(user.getWsOnLine());
+			break;
+		case AppConfig.WS_GETOFF_NO:
+			WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setGetOffDire(user.getWsOffDire());
+			WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setGetOffLine(user.getWsOffLine());
+			WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setMachineLoc(user.getWsGateLoc());
+			WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setMachineLine(user.getWsGateLine());
+			break;
+		case AppConfig.WS_TRANSFER_NO:
+			WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setGetOnDire(user.getWsOnDire());
+			WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setGetOnLine(user.getWsOnLine());
+			WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setGetOffDire(user.getWsOffDire());
+			WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setGetOffLine(user.getWsOffLine());
+			break;
+		}
+		super.onResume();
+	}
+
+
+
+	private void init() {
+		
+		context = getApplicationContext();
+		appContext = (AppContext)getApplication();
+		user = appContext.getUser();
+		ButterKnife.inject(this);
+		
+		final ActionBar bar =getSupportActionBar();
+        bar.setDisplayHomeAsUpEnabled(true);//有小箭头，图标可以点击
+        bar.setDisplayShowHomeEnabled(false);//左上角不显示程序图标
+		
+		//判空没有做
+		
+		SurveyUtils.fillUserInfoIntoEntity(WalkSurveyNewTimeRecordeActivity.walkSurveyEntity, user);
+		WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setAge(wsAgeValueTV.getText().toString());
+		WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setBagageType(wsBagageValueTV.getText().toString());
+		WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setWalkTool(wsLiftValueTV.getText().toString());
+		
+		ageList = fillArrayToList(getResources().getStringArray(R.array.wsAge));
+		bagageList = fillArrayToList(getResources().getStringArray(R.array.wsBagage));
+		liftList = fillArrayToList(getResources().getStringArray(R.array.wsLift));
+		
+		surveyTypeNo = SurveyUtils.getSurveyTypeNo(user.getWsType(), AppConfig.wsTypeInfo);
+		timeDataArrTotal.add(tempArr);
+	}
+
+	private void initView() {
+		mSpinerPopWindow = new SpinerPopWindow(this);
+		mSpinerPopWindow.setItemListener(this);
+		wsTodoNextTV.setText(AppConfig.wsTodoHints[surveyTypeNo][0]);
+		
+	}
+	
+	@OnClick({R.id.wsAgeValueTV,R.id.wsBagageValueTV,R.id.wsLiftValueTV})
+	void onSpinnerClick(View v){
+		switch(v.getId()){
+		case R.id.wsAgeValueTV:
+			mSpinerPopWindow.refreshData(ageList, 0);
+			mSpinerPopWindow.saveRID(R.id.wsAgeValueTV);
+			showSpinWindow(wsAgeValueTV);
+			break;
+		case R.id.wsBagageValueTV:
+			mSpinerPopWindow.refreshData(bagageList, 0);
+			mSpinerPopWindow.saveRID(R.id.wsBagageValueTV);
+			showSpinWindow(wsBagageValueTV);
+			break;
+		case R.id.wsLiftValueTV:
+			mSpinerPopWindow.refreshData(liftList, 0);
+			mSpinerPopWindow.saveRID(R.id.wsLiftValueTV);
+			showSpinWindow(wsLiftValueTV);
+			break;
+		}
+	}
+	
+	@OnClick({R.id.startSurveyImageView,R.id.searchSurveyImageView})
+	void onImageClick(View v){
+		
+		String curTime = StringUtils.getSystemTime();
+		int typeTimeSum[] = {4,5};//代表0进站出站需计时4次，1换乘需计时5次
+		preferences = getSharedPreferences("wsDatabaseRowID", MODE_WORLD_WRITEABLE);
+		databaseRowID = preferences.getInt("wsDatabaseRowID", 1);//默认为第二个参数1
+		switch(v.getId()){
+		case R.id.startSurveyImageView:
+			switch (surveyTypeNo) {
+			case AppConfig.WS_ON_TO_OFF_NO:
+				
+				if(inOutResetFlag == true){
+					inOutResetFlag = false;
+					timeDataArrTotal = new ArrayList<ArrayList<String>>();
+					timeDataArrTotal.add(new ArrayList<String>());
+				}
+				
+				wsAgeValueTV.setClickable(false);
+				wsLiftValueTV.setClickable(false);
+				wsBagageValueTV.setClickable(false);
+				
+				int todoNo=(countFlag+1)%typeTimeSum[surveyTypeNo];
+				wsTodoNextTV.setText(AppConfig.wsTodoHints[surveyTypeNo][todoNo]);
+				wsLastTimeTV.setText(curTime);
+				
+				//赋值入类
+				if(AppConfig.wsTodoHints[surveyTypeNo][countFlag].equals("进站刷卡时刻"))
+					WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setGotoPlatformTime(curTime);
+				else if(AppConfig.wsTodoHints[surveyTypeNo][countFlag].equals("到达站台时刻"))
+					WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setArrivePlatformTime(curTime);
+				else if(AppConfig.wsTodoHints[surveyTypeNo][countFlag].equals("出站刷卡时刻")){
+					WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setGooutPlatformTime(curTime);
+					WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setOpenDoorTime1(curTimeBackup);
+					timeDataArrTotal.get(dataSum-1).add(curTimeBackup);
+				}
+				else if(AppConfig.wsTodoHints[surveyTypeNo][countFlag].equals("列车开门时刻")&&(lineNo==0||lineNo==2))
+					WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setOpenDoorTime2(curTime);
+
+				//-----------------new---------------
+				if(timeDataArrTotal.get(0).size()==0)
+					dataSum = 1;
+				timeDataArrTotal.get(dataSum-1).add(curTime);//WalkSurveyTimeRecordedActivity.dataSum->rowID
+//				timeDataArrPer = new ArrayList<String>();
+//				for(int i=0;i<countFlag;i++){
+//					String tempData =timeDataArrTotal.get(dataSum-1).get(i).toString();//WalkSurveyTimeRecordedActivity.dataSum->rowID
+//					timeDataArrPer.add(tempData);
+//				}
+				
+				
+				//四分之一组录完
+				if(readyFlag==true)
+				{
+					UIHelper.ToastMessage(WalkSurveyNewTimeRecordeActivity.this,
+							"你已经录入完成第"+rowID+"组"+AppConfig.wsTypeInfo[surveyTypeNo].toString()+"的第"+(lineNo+1)+"条数据");
+					queryFlag = true;
+					//路线信息保存进实体类
+					insertInOutLineInfo(WalkSurveyNewTimeRecordeActivity.walkSurveyEntity,user,lineNo);
+					lineNo = (lineNo+1)%4;
+					//半组录完
+					if(AppConfig.wsTodoHints[AppConfig.WS_ON_TO_OFF_NO][countFlag].equals("出站刷卡时刻"))
+						countFlag = -1;
+					//一大组数据录完
+					if(lineNo==0){
+						UIHelper.ToastMessage(WalkSurveyNewTimeRecordeActivity.this,"你已经录入完成第"+rowID+"组数据");
+						rowID++;
+						inOutResetFlag = true;
+						
+//						timeDataArrTotal = new ArrayList<ArrayList<String>>();
+					}
+					readyFlag = false;
+					
+					//小组数据保存入库
+					
+					WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setID(databaseRowID); //rowID不对
+					WalkSurveyDataHelper.insertIntoWalkSurveyData(context, WalkSurveyNewTimeRecordeActivity.walkSurveyEntity);
+					//部分初始化类
+					initWSEntity(WalkSurveyNewTimeRecordeActivity.walkSurveyEntity);
+					
+					databaseRowID++;
+					Editor editor = preferences.edit();
+					editor.putInt("wsDatabaseRowID",databaseRowID);
+					editor.commit();
+					
+					wsAgeValueTV.setClickable(true);
+					wsLiftValueTV.setClickable(true);
+					wsBagageValueTV.setClickable(true);
+					
+					dataSum++;
+					tempArr = new ArrayList<String>();
+					timeDataArrTotal.add(tempArr);
+				}
+				
+				//lineNo为0和2时是进站
+				SurveyUtils.getWSLine(wsLineShowTV, user,lineNo);
+				if(wsTodoNextTV.getText().equals("列车开门时刻")||wsTodoNextTV.getText().equals("出站刷卡时刻"))
+					readyFlag = true;
+				countFlag++;
+				curTimeBackup = curTime;
+				break;
+
+			case AppConfig.WS_TRANSF_NO:
+				//重置数组
+				if(transResetFlag == true){     
+					//使用Flag解决timeDataArrTotal传递前被清空的问题
+					transResetFlag = false;
+					//下面两句初始化 timeDataArrTotal
+					timeDataArrTotal = new ArrayList<ArrayList<String>>();
+					timeDataArrTotal.add(new ArrayList<String>());
+					dataSum = 1;
+				}
+				
+				//bug 两次到达站台
+				//两次涉及到到达站台时刻  transCountFlag标识将哪组数据存入实体类
+				int transTodoNo=(transCountFlag+1)%typeTimeSum[surveyTypeNo];
+					if(transTodoNo==0) {
+						transTodoNo=1;
+//						gap=1;
+					}
+				wsTodoNextTV.setText(AppConfig.wsTodoHints[surveyTypeNo][transTodoNo]);
+				wsLastTimeTV.setText(curTime);
+				
+				//赋值入类 transCountFlag为024则列车开门时刻
+				if(AppConfig.wsTodoHints[surveyTypeNo][transCountFlag].equals("列车开门时刻")){
+					if(transCountFlag==0)
+						WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setOpenDoorTime1(curTime);
+					if(transCountFlag==2||transCountFlag==4){
+						WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setOpenDoorTime2(curTime);
+					}
+				}
+				else if(AppConfig.wsTodoHints[surveyTypeNo][transCountFlag].equals("到达站台时刻")){
+					WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setOpenDoorTime1(curTimeBackup);
+					if(arrayFlag != 0)
+						timeDataArrTotal.get(dataSum-1).add(curTimeBackup);
+					arrayFlag++;
+					WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setArrivePlatformTime(curTime);
+				}
+				
+				//为修改数据做准备
+				if(timeDataArrTotal.get(0).size()==0)
+					dataSum = 1;
+				timeDataArrTotal.get(dataSum-1).add(curTime);
+				
+				if(transReadyFlag == true){
+					UIHelper.ToastMessage(WalkSurveyNewTimeRecordeActivity.this,
+							"你已经录入完成第"+transRowID+"组"+AppConfig.wsTypeInfo[surveyTypeNo].toString()+"的第"+(transNo+1)+"条数据");
+					queryFlag = true;
+					//插入路线信息到类中
+					insertTransferLineInfo(WalkSurveyNewTimeRecordeActivity.walkSurveyEntity,user,transNo);
+					//小组数据入库
+					WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setID(databaseRowID); //rowID不对
+					WalkSurveyDataHelper.insertIntoWalkSurveyData(context, WalkSurveyNewTimeRecordeActivity.walkSurveyEntity);
+					initWSEntity(WalkSurveyNewTimeRecordeActivity.walkSurveyEntity);
+					databaseRowID++;
+					Editor editor = preferences.edit();
+					editor.putInt("wsDatabaseRowID",databaseRowID);
+					editor.commit();
+					
+					transNo = (transNo+1)%2;
+					if(transNo==0){
+						UIHelper.ToastMessage(WalkSurveyNewTimeRecordeActivity.this,"你已经录入完成第"+transRowID+"组数据");
+						transCountFlag = 0;
+						transRowID++;
+						transResetFlag = true;
+//						//下面两句初始化 timeDataArrTotal
+//						timeDataArrTotal = new ArrayList<ArrayList<String>>();
+//						dataSum = 0;
+					}
+					transReadyFlag = false;
+					//new
+					dataSum++;
+					tempArr = new ArrayList<String>();
+					timeDataArrTotal.add(tempArr);
+				}
+				 
+				//0是一段，1是二段
+				SurveyUtils.getWSLine(wsLineShowTV, user,transNo);
+				
+				//需要加判断条件 现在是一看见“列车开门时刻”就预加； 问题还有那个5； 那个显示路线的序号也没弄-SurveyUtils.getWSLine(wsLineShowTV, user,lineNo);
+				if(wsTodoNextTV.getText().equals("列车开门时刻"))
+//				if((gap==1&&(transTodoNo==2||transTodoNo==4))||(gap==2&&(transTodoNo==3||transTodoNo==5)))
+					transReadyFlag = true;
+				transCountFlag++;
+				curTimeBackup = curTime;
+				break;
+			}
+			
+			
+			
+				
+			
+			
+//			//获取count即主键
+//			preferences = getSharedPreferences("wsRowID", MODE_WORLD_WRITEABLE);
+//			rowID = preferences.getInt("wsRowID", 1);//默认为第二个参数1
+//			String curTime = StringUtils.getSystemTime();
+//			
+//			int typeTimeSum[] = {3,2,3};//代表0进站需计时3次，1出站需计时2次，2换乘需计时3次
+//			int todoNo=(countFlag+1)%typeTimeSum[surveyTypeNo];
+//			
+//			wsTodoNextTV.setText(AppConfig.wsTodoHints[surveyTypeNo][todoNo]);
+//			wsLastTimeTV.setText(curTime);
+//			
+//			//将记录的时刻赋值到类中
+//			if(AppConfig.wsTodoHints[surveyTypeNo][countFlag].equals("列车开门时刻")&&surveyTypeNo==0) //当类型为进站时，列车开门时刻在进站和到达站台两个数据的后面，因此用time2
+//				WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setOpenDoorTime2(curTime);
+//			else if(AppConfig.wsTodoHints[surveyTypeNo][countFlag].equals("列车开门时刻")&&surveyTypeNo!=0)
+//				WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setOpenDoorTime1(curTime);
+//			else if(AppConfig.wsTodoHints[surveyTypeNo][countFlag].equals("进站刷卡时刻"))
+//				WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setGotoPlatformTime(curTime);
+//			else if(AppConfig.wsTodoHints[surveyTypeNo][countFlag].equals("到达站台时刻"))
+//				WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setArrivePlatformTime(curTime);
+//			else if(AppConfig.wsTodoHints[surveyTypeNo][countFlag].equals("出站刷卡时刻"))
+//				WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setGooutPlatformTime(curTime);
+//			if(timeDataArrTotal.get(0).size()==0)
+//				dataSum = 1;
+//			timeDataArrTotal.get(dataSum-1).add(curTime);//WalkSurveyTimeRecordedActivity.dataSum->rowID
+//			countFlag++;
+//			fullFlag=0;
+//			
+//			//本来是在listener里面的
+//			timeDataArrPer = new ArrayList<String>();
+//			for(int i=0;i<countFlag;i++){
+//				String tempData =timeDataArrTotal.get(dataSum-1).get(i).toString();//WalkSurveyTimeRecordedActivity.dataSum->rowID
+//				timeDataArrPer.add(tempData);
+//			}
+//			//录完一组数据
+//			if(countFlag==typeTimeSum[surveyTypeNo]){
+//				//每录完一组数据就将数据保存进数据库
+//				WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setID(rowID);
+//				WalkSurveyDataHelper.insertIntoWalkSurveyData(context, WalkSurveyNewTimeRecordeActivity.walkSurveyEntity);
+//				
+//				countFlag=0;
+//				
+//				UIHelper.ToastMessage(WalkSurveyNewTimeRecordeActivity.this,
+//						"你已经录入完成"+AppConfig.wsTypeInfo[surveyTypeNo].toString()+"的第"+rowID+"条数据");
+//				rowID++;
+//				queryFlag = true;
+//				
+//				WalkSurveyTimeRecordedActivity.dataSum++;
+//				tempArr = new ArrayList<String>();
+//				timeDataArrTotal.add(tempArr);
+//				System.out.println("----");
+//				fullFlag=1;
+//				
+//				//通过sharedPreferences将主键保存起来
+//				Editor editor = preferences.edit();
+//				editor.putInt("wsRowID",rowID);
+//				editor.commit();
+//			}
+			
+			
+			
+			break;
+		case R.id.searchSurveyImageView:
+			if(queryFlag==false){
+				UIHelper.ToastMessage(context, "请在录完一组数据后，进行数据修改");
+				return;
+			}
+//			queryFlag = false;
+			Intent it = new Intent();
+			Bundle bundle = new Bundle();
+			bundle.putSerializable("timeDataArrTotal", timeDataArrTotal);
+			it.putExtras(bundle);
+ 			it.putExtra("surveyType", user.getWsType());
+ 			it.putExtra("lineNo", lineNo);
+ 			it.putExtra("transNo",transNo);
+// 			it.putExtra("rowID", databaseRowID);//改
+ 			it.putExtra("rowID", rowID);
+			it.setClass(getApplicationContext(), WalkSurveyDataPerNewActivity.class);
+			startActivity(it);
+//			timeDataArrPer=new ArrayList<String>();
+			break;
+		}
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.walk_survey_change_line, menu);
+		MenuItemCompat.setShowAsAction(menu.getItem(0), MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
+		return true;
+	}
+
+	@Override
+	public void onItemClick(int pos,int rID) {
+		switch(rID){
+		case R.id.wsAgeValueTV:
+			Log.d("-------", "wsAgeValueTV");
+			setData(pos,ageList,wsAgeValueTV);
+			if(wsAgeValueTV.isClickable()==false)
+				UIHelper.ToastMessage(context, "此时不可更改调查人属性");
+			WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setAge(wsAgeValueTV.getText().toString());
+			break;
+		case R.id.wsBagageValueTV:
+			Log.d("-------", "wsBagageValueTV");
+			setData(pos,bagageList,wsBagageValueTV);
+			if(wsBagageValueTV.isClickable()==false)
+				UIHelper.ToastMessage(context, "此时不可更改调查人属性");
+			WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setBagageType(wsBagageValueTV.getText().toString());
+			break;
+		case R.id.wsLiftValueTV:
+			Log.d("-------", "wsLiftValueTV");
+			setData(pos,liftList,wsLiftValueTV);
+			if(wsLiftValueTV.isClickable()==false)
+				UIHelper.ToastMessage(context, "此时不可更改调查人属性");
+			WalkSurveyNewTimeRecordeActivity.walkSurveyEntity.setWalkTool(wsLiftValueTV.getText().toString());
+			break;
+		}
+	}
+	
+	private void setData(int pos,List<String> tempList,TextView tv){
+		if (pos >= 0 && pos <= tempList.size()){
+			String value = tempList.get(pos);
+			tv.setText(value);
+		}
+	}
+
+	private void showSpinWindow(TextView tv){
+		mSpinerPopWindow.setWidth(tv.getWidth());
+		mSpinerPopWindow.showAsDropDown(tv);
+	}
+	
+	private List<String> fillArrayToList(String arr[]){
+		List<String> tempList = new ArrayList<String>();
+		for(int i = 0; i < arr.length; i++){
+			tempList.add(arr[i]);
+		}
+		return tempList;
+	}
+
+
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			this.finish();
+			break;
+		case R.id.walk_survey_change_line:
+			UIHelper.ToastMessage(context, "切换路线");
+			switch(surveyTypeNo){
+			case AppConfig.WS_GETON_NO:
+				break;
+			case AppConfig.WS_GETOFF_NO:
+				break;
+			case AppConfig.WS_TRANSFER_NO:
+				break;
+			}
+			break;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+	
+	private void initWSEntity(WalkSurveyEntity wsEntity){
+		wsEntity.setArrivePlatformTime("");
+		wsEntity.setOpenDoorTime1("");
+		wsEntity.setOpenDoorTime2("");
+		wsEntity.setGotoPlatformTime("");
+		wsEntity.setGooutPlatformTime("");
+	}
+	
+	private void insertTransferLineInfo(WalkSurveyEntity wsEntity,UserEntity user,int transferNo){
+		switch(transferNo){
+		case 0:
+			wsEntity.setGetOnLine(user.getWslOnLine());
+			wsEntity.setGetOnDire(user.getWslOnDire());
+			wsEntity.setGetOffLine(user.getWslOffLine());
+			wsEntity.setGetOffDire(user.getWslOffDire());
+			break;
+		case 1:
+			wsEntity.setGetOnLine(user.getWslOffLine());
+			wsEntity.setGetOnDire(user.getWslOffDire());
+			wsEntity.setGetOffLine(user.getWslOnLine());
+			wsEntity.setGetOffDire(user.getWslOnDire());
+			break;
+		}
+	}
+	
+	private void insertInOutLineInfo(WalkSurveyEntity wsEntity,UserEntity user,int transferNo){
+		switch(transferNo){
+		case 0:
+			wsEntity.setMachineLoc(user.getWslStartGLoc());
+			wsEntity.setMachineLine(user.getWslGLine());
+			wsEntity.setGetOnLine(user.getWslTrainLine());
+			wsEntity.setGetOnDire(user.getWslDireSToE());
+			break;
+		case 1:
+			wsEntity.setGetOffLine(user.getWslTrainLine());
+			wsEntity.setGetOffDire(user.getWslDireSToE());
+			wsEntity.setMachineLine(user.getWslGLine());
+			wsEntity.setMachineLoc(user.getWslEndGLoc());
+			break;
+		case 2:
+			wsEntity.setMachineLoc(user.getWslEndGLoc());
+			wsEntity.setMachineLine(user.getWslGLine());
+			wsEntity.setGetOnLine(user.getWslTrainLine());
+			wsEntity.setGetOnDire(user.getWslDireEToS());
+			break;
+		case 3:
+			wsEntity.setGetOffLine(user.getWslTrainLine());
+			wsEntity.setGetOffDire(user.getWslDireEToS());
+			wsEntity.setMachineLine(user.getWslGLine());
+			wsEntity.setMachineLoc(user.getWslStartGLoc());
+			break;
+		}
+	}
+}

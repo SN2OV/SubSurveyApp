@@ -1,0 +1,425 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ODSurveyDataPerActivity"
+    android:background="@drawable/main_backgroud" >
+
+    <LinearLayout
+        android:id="@+id/odSurveyNo1LL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/odSurveyGetinStationTimeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="进站刷卡时刻："
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/odSurveyGetinStationTimeET"
+                style="@style/SurveyEditTextStyle"
+                android:layout_toLeftOf="@+id/odSurveyGetinStationTimeReset"
+                android:layout_toRightOf="@+id/odSurveyGetinStationTimeTV"
+                 />
+            <requestFocus />
+
+            <ImageView
+                android:id="@+id/odSurveyGetinStationTimeReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/reset_survey" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/odSurveyArriveStationTime1TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="到达站台时刻："
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/odSurveyArriveStationTime1ET"
+                style="@style/SurveyEditTextStyle"
+                android:layout_toLeftOf="@+id/odSurveyArriveStationTime1Reset"
+                android:layout_toRightOf="@+id/odSurveyArriveStationTime1TV"
+                 />
+
+            <ImageView
+                android:id="@+id/odSurveyArriveStationTime1Reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/reset_survey" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/odSurveyTrainStartingTime1TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="列车开行时刻："
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/odSurveyTrainStartingTime1ET"
+                style="@style/SurveyEditTextStyle"
+                android:layout_toLeftOf="@+id/odSurveyTrainStartingTime1Reset"
+                android:layout_toRightOf="@+id/odSurveyTrainStartingTime1TV"
+                 />
+
+            <ImageView
+                android:id="@+id/odSurveyTrainStartingTime1Reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/reset_survey" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/odSurveyGetoffStationTime1TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="下车时刻："
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/odSurveyGetoffStationTime1ET"
+                style="@style/SurveyEditTextStyle"
+                android:layout_toLeftOf="@+id/odSurveyGetoffStationTime1Reset"
+                android:layout_toRightOf="@+id/odSurveyGetoffStationTime1TV"
+                 >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/odSurveyGetoffStationTime1Reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/reset_survey" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/odSurveyNo2LL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/odSurveyNo1LL"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/odSurveyInfo2TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="第二班车"
+                android:textColor="@color/red"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/odSurveyArriveStationTime2TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="到达站台时刻："
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/odSurveyArriveStationTime2ET"
+                style="@style/SurveyEditTextStyle"
+                android:layout_toLeftOf="@+id/odSurveyArriveStationTime2Reset"
+                android:layout_toRightOf="@+id/odSurveyArriveStationTime2TV"
+                 />
+
+            <ImageView
+                android:id="@+id/odSurveyArriveStationTime2Reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/reset_survey" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/odSurveyTrainStartingTime2TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="列车开行时刻："
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/odSurveyTrainStartingTime2ET"
+                style="@style/SurveyEditTextStyle"
+                android:layout_toLeftOf="@+id/odSurveyTrainStartingTime2Reset"
+                android:layout_toRightOf="@+id/odSurveyTrainStartingTime2TV"
+                 />
+
+            <ImageView
+                android:id="@+id/odSurveyTrainStartingTime2Reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/reset_survey" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/odSurveyGetoffStationTime2TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="下车时刻："
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/odSurveyGetoffStationTime2ET"
+                style="@style/SurveyEditTextStyle"
+                android:layout_toLeftOf="@+id/odSurveyGetoffStationTime2Reset"
+                android:layout_toRightOf="@+id/odSurveyGetoffStationTime2TV"
+                 />
+
+            <ImageView
+                android:id="@+id/odSurveyGetoffStationTime2Reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/reset_survey" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/odSurveyNo3LL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/odSurveyNo2LL"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/odSurveyInfo3TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="第三班车"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/red" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/odSurveyArriveStationTime3TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="到达站台时刻："
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/odSurveyArriveStationTime3ET"
+                style="@style/SurveyEditTextStyle"
+                android:layout_toLeftOf="@+id/odSurveyArriveStationTime3Reset"
+                android:layout_toRightOf="@+id/odSurveyArriveStationTime3TV"
+                />
+
+            <ImageView
+                android:id="@+id/odSurveyArriveStationTime3Reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/reset_survey" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/odSurveyTrainStartingTime3TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="列车开行时刻："
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/odSurveyTrainStartingTime3ET"
+                style="@style/SurveyEditTextStyle"
+                android:layout_toLeftOf="@+id/odSurveyTrainStartingTime3Reset"
+                android:layout_toRightOf="@+id/odSurveyTrainStartingTime3TV"
+                />
+
+            <ImageView
+                android:id="@+id/odSurveyTrainStartingTime3Reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/reset_survey" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/odSurveyGetoffStationTime3TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="下车时刻："
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/odSurveyGetoffStationTime3ET"
+                style="@style/SurveyEditTextStyle"
+                android:layout_toLeftOf="@+id/odSurveyGetoffStationTime3Reset"
+                android:layout_toRightOf="@+id/odSurveyGetoffStationTime3TV"
+                />
+
+            <ImageView
+                android:id="@+id/odSurveyGetoffStationTime3Reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/reset_survey" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/odSurveyGetoutStationTimeRL"
+        android:layout_below="@+id/odSurveyNo3LL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/odSurveyGetoutStationTimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="出站刷卡时刻："
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/odSurveyGetoutStationTimeET"
+            style="@style/SurveyEditTextStyle"
+            android:layout_toLeftOf="@+id/odSurveyGetoutStationTimeReset"
+            android:layout_toRightOf="@+id/odSurveyGetoutStationTimeTV"
+             />
+
+        <ImageView
+            android:id="@+id/odSurveyGetoutStationTimeReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:src="@drawable/reset_survey" />
+        
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/odSureyQueryIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/odSurveyGetoutStationTimeRL"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/query_survey_cn_selector" />
+
+    <ImageView
+        android:id="@+id/odSureySaveIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/odSurveyGetoutStationTimeRL"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/save_survey_cn_selector" />
+
+</RelativeLayout>

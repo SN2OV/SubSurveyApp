@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    	<LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_alignParentTop="true"
+             android:orientation="vertical" >
+             
+    	      <RelativeLayout
+            android:id="@+id/wsPerOpenDoor1RL"
+            style="@style/settingStyle"
+            android:layout_alignParentTop="true"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsPerOpenDoor1TagTV"
+                style="@style/psTvStyleTag"
+                android:text="列车开门时刻" />
+
+            <ImageView
+                android:id="@+id/wsPerOpenDoor1IV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsPerOpenDoor1TV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsPerOpenDoor1IV"
+                android:text="" />
+
+        </RelativeLayout>
+        
+   	    <RelativeLayout
+            android:id="@+id/wsPerGotoPlatformRL"
+            android:layout_below="@+id/wsPerOpenDoorRL"
+            style="@style/settingStyle"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsPerGotoPlatformTagTV"
+                style="@style/psTvStyleTag"
+                android:text="进站刷卡时刻" />
+
+            <ImageView
+                android:id="@+id/wsPerGotoPlatformIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsPerGotoPlatformTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsPerGotoPlatformIV"
+                android:text="" />
+        </RelativeLayout>
+
+   	    <RelativeLayout
+            android:id="@+id/wsPerArrivePlatformRL"
+            style="@style/settingStyle"
+            android:layout_below="@+id/wsPerGotoPlatformRL"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsPerArrivePlatformTagTV"
+                style="@style/psTvStyleTag"
+                android:text="到达站台时刻" />
+
+            <ImageView
+                android:id="@+id/wsPerArrivePlatformIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsPerArrivePlatformTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsPerArrivePlatformIV"
+                android:text="" />
+        </RelativeLayout>
+        
+   	     <RelativeLayout
+            android:id="@+id/wsPerOpenDoor2RL"
+            style="@style/settingStyle"
+            android:layout_below="@+id/wsPerArrivePlatformRL"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsPerOpenDoor2TagTV"
+                style="@style/psTvStyleTag"
+                android:text="列车开门时刻" />
+
+            <ImageView
+                android:id="@+id/wsPerOpenDoor2IV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsPerOpenDoor2TV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsPerOpenDoor2IV"
+                android:text="" />
+        </RelativeLayout>
+        
+   	    <RelativeLayout
+            android:id="@+id/wsPerGoOutPlatFormRL"
+            style="@style/settingStyle"
+            android:layout_below="@+id/wsPerOpenDoor2RL"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsPerGoOutPlatFormTagTV"
+                style="@style/psTvStyleTag"
+                android:text="出站刷卡时刻" />
+
+            <ImageView
+                android:id="@+id/wsPerGoOutPlatFormIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsPerGoOutPlatFormTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsPerGoOutPlatFormIV"
+                android:text="" />
+        </RelativeLayout>
+        </LinearLayout>
+
+   	 
+    
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    	<LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_alignParentTop="true"
+             android:orientation="vertical" >
+             
+    	      <RelativeLayout
+            android:id="@+id/wsLineGetOffDireRL"
+            style="@style/settingStyle"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsLineGetOffDireTagTV"
+                style="@style/psTvStyleTag"
+                android:text="下车线路方向" />
+
+            <ImageView
+                android:id="@+id/wsLineGetOffDireIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsLineGetOffDireTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsLineGetOffDireIV"
+                android:text="" />
+
+        </RelativeLayout>
+        
+   	    <RelativeLayout
+            android:id="@+id/wsLineGetOffLineRL"
+            style="@style/settingStyle"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsLineGetOffLineTagTV"
+                style="@style/psTvStyleTag"
+                android:text="下车线路" />
+
+            <ImageView
+                android:id="@+id/wsLineGetOffLineIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsLineGetOffLineTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsLineGetOffLineIV"
+                android:text="" />
+        </RelativeLayout>
+
+   	    <RelativeLayout
+            android:id="@+id/wsLineGetOnDireRL"
+            style="@style/settingStyle"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsLineGetOnDireTagTV"
+                style="@style/psTvStyleTag"
+                android:text="上车线路方向" />
+
+            <ImageView
+                android:id="@+id/wsLineGetOnDireIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsLineGetOnDireTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsLineGetOnDireIV"
+                android:text="" />
+        </RelativeLayout>
+        
+   	     <RelativeLayout
+            android:id="@+id/wsLineGetOnLineRL"
+            style="@style/settingStyle"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsLineGetOnLineTagTV"
+                style="@style/psTvStyleTag"
+                android:text="上车线路" />
+
+            <ImageView
+                android:id="@+id/wsLineGetOnLineIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsLineGetOnLineTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsLineGetOnLineIV"
+                android:text="" />
+        </RelativeLayout>
+        </LinearLayout>
+
+   	 
+    
+
+</RelativeLayout>

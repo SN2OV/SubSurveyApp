@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/set_pop"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_grey" >
+
+    <LinearLayout
+        android:id="@+id/ll_option_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ws_quick_option_ly"
+                style="@style/quick_option_item" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/walk_survey_icon_selector" />
+
+                <TextView
+                    style="@style/quick_option_item_text"
+                    android:text="走行调查" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ss_quick_option_ly"
+                style="@style/quick_option_item" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/stop_survey_selector" />
+
+                <TextView
+                    style="@style/quick_option_item_text"
+                    android:text="留乘调查" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rs_quick_option_ly"
+                style="@style/quick_option_item" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/reverse_survey_selector" />
+
+                <TextView
+                    style="@style/quick_option_item_text"
+                    android:text="反向调查" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_quick_option_voice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout 
+                android:id="@+id/od_quick_option_ly"
+                style="@style/quick_option_item" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/od_survey_selector" />
+
+                <TextView
+                    style="@style/quick_option_item_text"
+                    android:text="OD调查" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ts_quick_option_ly"
+                style="@style/quick_option_item" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/transfer_survey_selector" />
+
+                <TextView
+                    style="@style/quick_option_item_text"
+                    android:text="换乘量调查" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_foot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_option_container"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="10dip"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="@null"
+            android:focusable="false"
+            android:src="@drawable/btn_quickoption_route" />
+    </LinearLayout>
+
+</RelativeLayout>

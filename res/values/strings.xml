@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">客流调查</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_walk_survey">走行设置</string>
+    <string name="title_activity_name">NameActivity</string>
+    <string name="title_activity_walk_time_survey">返回</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_walk_survey_time">计时</string>
+    <string name="title_activity_walk_survey_data_per">单组数据</string>
+    <string name="title_activity_walk_survey_data_total">全部数据</string>
+    <string name="title_activity_stay_survey_setting">留乘设置</string>
+    <string name="title_activity_stay_survey_time_recorded">计时</string>
+    <string name="title_activity_stay_survey_data_per">单组数据</string>
+    <string name="title_activity_stay_survey_data_total">全部数据</string>
+    <string name="title_activity_odsurvey_setting">OD设置</string>
+    <string name="title_activity_odsurvey_time_recorded">计时</string>
+    <string name="title_activity_odsurvey_data_per">单组数据</string>
+    <string name="title_activity_odsurvey_data_total">全部数据</string>
+    <string name="title_activity_transfer_survey_setting">换乘量设置</string>
+    <string name="title_activity_transfer_survey_time_recorded">测人数</string>
+    <string name="title_activity_transfer_survey_data_total">全部数据</string>
+    <string name="title_activity_main_new">客流调查</string>
+    <string name="title_activity_psname">编辑</string>
+    <string name="title_activity_transfer_survey_time_recorded_new">换乘量计时</string>
+    <string name="title_activity_menu_personal_info">个人信息</string>
+    <string name="title_activity_transfer_setting_fragment">TransferSettingFragment</string>
+    <string name="title_activity_walk_setting_fragment">设置</string>
+    <string name="title_activity_walk_line_setting_fragment">预定路线</string>
+    <string name="title_activity_walk_survey_new_time_recorde">走行计时</string>
+    <string name="title_activity_walk_survey_data_per_new">分组数据</string>
+    <string name="title_activity_wsin_out_line_setting">走行路线设置</string>
+    <string name="title_activity_wsword">编辑</string>
+    <string name="title_activity_wstransfer_line_setting">走行路线设置</string>
+    <string name="title_activity_odsetting_fragment">ODSettingFragment</string>
+    <string name="title_activity_odword">编辑</string>
+    <string name="title_activity_odline_setting">预设路线</string>
+    <string name="title_activity_odsurvey_time_recorded_new">OD计时</string>
+    <string name="title_activity_odsurvey_data_per_new">分组数据</string>
+    <string name="title_activity_stay_setting_fragment">StaySettingFragment</string>
+    <string name="title_activity_ssword">编辑</string>
+    <string name="title_activity_stay_survey_line_setting">留乘路线设置</string>
+    <string name="title_activity_stay_survey_time_recorded_new">留乘计时</string>
+    <string name="title_activity_dialog_sscount">DialogSSCount</string>
+    <string name="title_activity_stay_survey_data_per_new">单组数据</string>
+    <string name="title_activity_test">TestActivity</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_reverse_survey_time_recorded">反向计时</string>
+    <string name="title_activity_reverse_survey_data_total">反向数据</string>
+
+</resources>

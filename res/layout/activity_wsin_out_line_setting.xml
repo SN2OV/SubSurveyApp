@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    	<LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_alignParentTop="true"
+             android:orientation="vertical" >
+             
+    	      <RelativeLayout
+            android:id="@+id/wsLineStartGateLocRL"
+            style="@style/settingStyle"
+            android:layout_alignParentTop="true"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsLineStartGateLocTagTV"
+                style="@style/psTvStyleTag"
+                android:text="起点闸机位置" />
+
+            <ImageView
+                android:id="@+id/wsLineStartGateLocIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsLineStartGateLocTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsLineStartGateLocIV"
+                android:text="" />
+
+        </RelativeLayout>
+        
+   	    <RelativeLayout
+            android:id="@+id/wsLineGateLineRL"
+            android:layout_below="@+id/wsLineStartGateLocRL"
+            style="@style/settingStyle"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsLineGateLineTagTV"
+                style="@style/psTvStyleTag"
+                android:text="闸机线路" />
+
+            <ImageView
+                android:id="@+id/wsLineGateLineIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsLineGateLineTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsLineGateLineIV"
+                android:text="" />
+        </RelativeLayout>
+
+   	    <RelativeLayout
+            android:id="@+id/wsLineEndGateLocRL"
+            style="@style/settingStyle"
+            android:layout_below="@+id/wsLineGateLineRL"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsLineEndGateLocTagTV"
+                style="@style/psTvStyleTag"
+                android:text="终点闸机位置" />
+
+            <ImageView
+                android:id="@+id/wsLineEndGateLocIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsLineEndGateLocTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsLineEndGateLocIV"
+                android:text="" />
+        </RelativeLayout>
+        
+   	     <RelativeLayout
+            android:id="@+id/wsLineDirStartToEndRL"
+            style="@style/settingStyle"
+            android:layout_below="@+id/wsLineEndGateLocRL"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsLineDirStartToEndTagTV"
+                style="@style/psTvStyleTag"
+                android:text="列车方向（起-终）" />
+
+            <ImageView
+                android:id="@+id/wsLineDirStartToEndIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsLineDirStartToEndTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsLineDirStartToEndIV"
+                android:text="" />
+        </RelativeLayout>
+        
+   	    <RelativeLayout
+            android:id="@+id/wsLineTrainLineRL"
+            style="@style/settingStyle"
+            android:layout_below="@+id/wsLineDirStartToEndRL"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsLineTrainLineTagTV"
+                style="@style/psTvStyleTag"
+                android:text="列车线路" />
+
+            <ImageView
+                android:id="@+id/wsLineTrainLineIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsLineTrainLineTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsLineTrainLineIV"
+                android:text="" />
+        </RelativeLayout>
+        
+   	    <RelativeLayout
+            android:id="@+id/wsLineDirEndToStartRL"
+            style="@style/settingStyle"
+            android:layout_below="@+id/wsLineTrainLineRL"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsLineDirEndToStartTagTV"
+                style="@style/psTvStyleTag"
+                android:text="列车方向（终-起）" />
+
+            <ImageView
+                android:id="@+id/wsLineDirEndToStartIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsLineDirEndToStartTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsLineDirEndToStartIV"
+                android:text="" />
+        </RelativeLayout>
+        </LinearLayout>
+
+   	 
+    
+
+</RelativeLayout>

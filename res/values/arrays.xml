@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="news_viewpage_arrays">
+        <item>走行</item>
+        <item>留乘</item>
+        <item>OD</item>
+        <item>换乘量</item>
+        <item>反向</item>
+    </string-array>
+    
+    <attr name="tvcolor" format="reference|color" />
+    <attr name="tvsize" format="dimension" />
+    
+    <string-array name="wsAge">
+        <item >青年</item>
+        <item >中年</item>
+        <item >老年</item>
+    </string-array>
+    <string-array name="wsBagage">
+        <item >无行李</item>
+        <item >一般行李</item>
+        <item >大件行李</item>
+    </string-array>
+    <string-array name="wsLift">
+        <item >楼梯</item>
+        <item >扶梯</item>
+    </string-array>
+    <string-array name="wsSex">
+        <item >男</item>
+        <item >女</item>
+    </string-array>
+    <string-array name="wsTel">
+        <item >关注</item>
+        <item >未关注</item>
+    </string-array>
+    <string-array name="wsSpeed">
+        <item >快</item>
+        <item >中</item>
+        <item >慢</item>
+    </string-array>
+    
+    <string-array name="odType">
+        <item >无换乘</item>
+        <item >换乘一次</item>
+        <item >换乘两次</item>
+    </string-array>
+    
+    <string-array name="odTimePeriod">
+        <item >平峰</item>
+        <item >高峰</item>
+    </string-array>
+    
+    <string-array name="ssTimePeriod">
+        <item >平峰</item>
+        <item >高峰</item>
+    </string-array>
+
+    <string-array name="rsType">
+        <item >上车</item>
+        <item >下车</item>
+    </string-array>
+
+    <string-array name="rsTimePeriod">
+        <item >07:00~09:00</item>
+        <item >10:00~12:00</item>
+    </string-array>
+    
+    <string-array name="ssType">
+        <item >进站</item>
+        <item >换乘</item>
+    </string-array>
+    
+    <string-array name="ssSex">
+        <item >男</item>
+        <item >女</item>
+    </string-array>
+</resources>

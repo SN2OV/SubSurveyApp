@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ODSurveyTimeRecordedNewActivity" >
+
+<RelativeLayout
+    android:id="@+id/odRecordedRL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/record_background"
+    android:layout_marginTop="15dp"
+    android:layout_below="@+id/odFlightRL" >
+
+         <RelativeLayout
+             android:id="@+id/odTodoRL"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_marginTop="10dp" >
+
+             <TextView
+                 android:id="@+id/odTodoNextTagTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:gravity="center"
+                 android:layout_alignParentTop="true"
+                 android:text="即将记录"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:id="@+id/odTodoNextTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/odTodoNextTagTV"
+                 android:layout_centerHorizontal="true"
+                 android:layout_centerVertical="true"
+                 android:text=""
+                 android:textColor="@color/themeBlue"
+                 android:textSize="40dp" />
+         </RelativeLayout>
+
+         <RelativeLayout
+             android:id="@+id/odLastTimeRL"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/odTodoRL"
+             android:layout_marginTop="10dp" >
+
+             <TextView
+                 android:id="@+id/odLastTimeTagTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:text="上一时刻"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:id="@+id/odLastTimeTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/odLastTimeTagTV"
+                 android:layout_centerHorizontal="true"
+                 android:textColor="@color/themeBlue"
+                 android:text=""
+                 android:textSize="40dp" />
+         </RelativeLayout>
+
+         <RelativeLayout
+             android:id="@+id/odImagesRL"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentLeft="true"
+             android:layout_marginBottom="38dp" >
+
+             <ImageView
+                 android:id="@+id/ODStartSurveyImageView"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_marginLeft="40dp"
+                 android:src="@drawable/start_survey" />
+
+             <ImageView
+                 android:id="@+id/ODSearchSurveyImageView"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginRight="40dp"
+                 android:src="@drawable/search_survey" />
+         </RelativeLayout>
+
+     </RelativeLayout>
+
+<TextView
+    android:id="@+id/odLineShowTV"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="15dp"
+    android:gravity="center"
+    android:text="进站：苹果园-四惠东"
+    android:textColor="@color/red"
+    android:textSize="18sp" />
+
+<RelativeLayout
+    android:id="@+id/odFlightRL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/odLineShowTV"
+    android:visibility="gone"
+    >
+
+    <NumberPicker
+        android:id="@+id/ODFlightNumberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="32dp"
+        android:text="乘车班次"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
+    
+</RelativeLayout>

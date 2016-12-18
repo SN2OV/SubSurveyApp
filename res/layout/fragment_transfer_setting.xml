@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+        <RelativeLayout
+            android:id="@+id/tsSettingLocRL"
+            style="@style/settingStyle"
+            android:layout_alignParentTop="true"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/tsSettingTV_loc_tag"
+                style="@style/psTvStyleTag"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="具体位置" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="1dp"
+                android:src="@drawable/botton_bg_arrowright" />
+
+            <TextView
+                android:id="@+id/tsSettingTV_loc"
+                style="@style/psTvStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/imageView1"
+                android:text=""
+                android:singleLine="true"
+                android:maxEms="12"
+                android:ellipsize="end"
+                 />
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+        style="@style/settingStyle"
+        android:id="@+id/tsSettingDataRL"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tsSettingRL_timeperiod"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/TextView02"
+            style="@style/psTvStyleTag"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="换乘量数据" />
+
+        <ImageView
+            android:id="@+id/ImageView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="1dp"
+            android:src="@drawable/botton_bg_arrowright" />
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:visibility="gone"
+            style="@style/psTvStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/ImageView01"
+            android:text="1号线B口闸机" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/settingStyle"
+        android:id="@+id/tsSettingRL_timeperiod"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tsSettingLocRL"
+        android:layout_alignLeft="@+id/tsSettingDataRL"
+        android:layout_alignStart="@+id/tsSettingDataRL">
+
+        <ImageView
+            android:id="@+id/tsSettingIV_timeperiod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="1dp"
+            android:src="@drawable/botton_bg_arrowright" />
+
+        <TextView
+            style="@style/psTvStyleTag"
+            android:id="@+id/tsSettingTV_timeperiod_tag"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="调查时间段"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/psTvStyle"
+            android:id="@+id/tsSettingTV_timeperiod"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/tsSettingIV_timeperiod"
+            android:text="早高峰"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+//apply plugin: 'com.android.library'
+apply plugin : 'com.android.application'
+
+
+dependencies {
+    compile fileTree(include: '*.jar', dir: 'libs')
+    //    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.jakewharton:butterknife:6.1.0'
+    //    compile 'com.android.support:appcompat-v7:21.0.2'
+    //    compile 'com.android.support:support-v4:21.0.2'
+    //    compile 'com.android.support:support-v4:23.2.0'
+    compile 'com.android.support:appcompat-v7:19.1.0'
+    compile 'com.android.support:support-v4:19.1.0'
+    compile 'com.android.support:multidex:1.0.0'
+
+//    compile 'org.apache.poi:poi-ooxml:3.15'
+//    compile 'com.fasterxml:aalto-xml:1.0.0'
+    //    compile files('libs/xmlbeans-2.6.0.jar')
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+}
+
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '21.1.2'
+
+    defaultConfig {
+        minSdkVersion 11
+        targetSdkVersion 21
+        versionCode 2
+        versionName "2.3"
+        multiDexEnabled true
+    }
+
+
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src', '.apt_generated']
+            resources.srcDirs = ['src', '.apt_generated']
+            aidl.srcDirs = ['src', '.apt_generated']
+            renderscript.srcDirs = ['src', '.apt_generated']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+}
+
+buildscript {
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.0'
+
+    }
+    repositories {
+        jcenter()
+    }
+}
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "utf-8"
+}
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs << "-Xlint:unchecked"
+    options.compilerArgs << "-Xlint:deprecation"
+}

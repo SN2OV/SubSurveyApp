@@ -1,0 +1,86 @@
+Applications Graphics Acceleration Info:
+Uptime: 184383 Realtime: 184383
+
+** Graphics info for pid 536 [com.android.launcher] **
+Profile data in ms:
+
+	com.android.launcher/com.android.launcher2.Launcher/android.view.ViewRootImpl@b3e2ad38
+View hierarchy:
+
+  com.android.launcher/com.android.launcher2.Launcher/android.view.ViewRootImpl@b3e2ad38
+  86 views, 0.00 kB of display lists
+
+
+Total ViewRootImpl: 1
+Total Views:        86
+Total DisplayList:  0.00 kB
+
+
+** Graphics info for pid 592 [android.process.acore] **
+Profile data in ms:
+
+View hierarchy:
+
+
+Total ViewRootImpl: 0
+Total Views:        0
+Total DisplayList:  0.00 kB
+
+
+** Graphics info for pid 380 [system] **
+Profile data in ms:
+
+	KeyguardScrim/android.view.ViewRootImpl@b3f32d50
+View hierarchy:
+
+  KeyguardScrim/android.view.ViewRootImpl@b3f32d50
+  1 views, 0.00 kB of display lists
+
+
+Total ViewRootImpl: 1
+Total Views:        1
+Total DisplayList:  0.00 kB
+
+
+** Graphics info for pid 720 [com.android.systemui] **
+Profile data in ms:
+
+	StatusBar/android.view.ViewRootImpl@b44088f0
+	Keyguard/android.view.ViewRootImpl@b4424260
+View hierarchy:
+
+  StatusBar/android.view.ViewRootImpl@b44088f0
+  111 views, 0.00 kB of display lists
+
+  Keyguard/android.view.ViewRootImpl@b4424260
+  28 views, 0.00 kB of display lists
+
+
+Total ViewRootImpl: 2
+Total Views:        139
+Total DisplayList:  0.00 kB
+
+
+** Graphics info for pid 651 [com.android.defcontainer] **
+Profile data in ms:
+
+View hierarchy:
+
+
+Total ViewRootImpl: 0
+Total Views:        0
+Total DisplayList:  0.00 kB
+
+
+** Graphics info for pid 499 [com.android.inputmethod.latin] **
+Profile data in ms:
+
+View hierarchy:
+
+
+Total ViewRootImpl: 0
+Total Views:        0
+Total DisplayList:  0.00 kB
+
+
+** Graphics info for pid 694 [com.android.music] **

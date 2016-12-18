@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    <RelativeLayout
+            android:id="@+id/wsSettingTimeRL"
+            style="@style/settingStyle"
+            android:layout_alignParentTop="true"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsSettingTV_time_tag"
+                style="@style/psTvStyleTag"
+                android:text="出行时间段" />
+
+            <ImageView
+                android:id="@+id/wsSettingTimeIV"
+                style = "@style/psIvStyle"
+                 />
+
+            <TextView
+                android:id="@+id/wsSettingTV_time"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsSettingTimeIV"
+                android:text="早高峰" />
+
+        </RelativeLayout>
+        
+    <RelativeLayout
+        style="@style/settingStyle"
+        android:id="@+id/wsSettingTypeRL"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/wsSettingTimeRL"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/wsSettingTV_type_tag"
+            style="@style/psTvStyleTag"
+            android:text="走行类型" />
+
+        <ImageView
+            android:id="@+id/wsSettingTypeIV"
+            style = "@style/psIvStyle"
+             />
+
+        <TextView
+            android:id="@+id/wsSettingTV_type"
+            style="@style/psTvStyle"
+            android:layout_toLeftOf="@+id/wsSettingTypeIV"
+            android:text="进站-出站" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/wsSettingLineRL"
+        style="@style/settingStyle"
+        android:layout_below="@+id/wsSettingTypeRL"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/wsSettingTV_line_tag"
+            style="@style/psTvStyleTag"
+            android:text="预设路线" />
+
+        <ImageView
+            android:id="@+id/wsSettingLineIV"
+            style = "@style/psIvStyle"
+             />
+
+        <TextView
+            android:id="@+id/wsSettingTV_line"
+            style="@style/psTvStyle"
+            android:layout_toLeftOf="@+id/wsSettingLineIV"
+            android:text="" />
+    </RelativeLayout>
+    
+    
+    <RelativeLayout
+        android:id="@+id/wsSettingDataRL"
+        style="@style/settingStyle"
+        android:layout_below="@+id/wsSettingLineRL"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/wsSettingTV_data_tag"
+            style="@style/psTvStyleTag"
+            android:text="走行数据" />
+
+        <ImageView
+            android:id="@+id/wsSettingDataIV"
+            style = "@style/psIvStyle"
+             />
+
+        <TextView
+            android:id="@+id/wsSettingTV_data"
+            style="@style/psTvStyle"
+            android:visibility="gone"
+            android:layout_toLeftOf="@+id/wsSettingDataIV"
+            android:text="进站" />
+    </RelativeLayout>
+
+    
+
+</RelativeLayout>

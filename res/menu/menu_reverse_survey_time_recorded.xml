@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.subsurvey.reverseSurvey.ui.ReverseSurveyTimeRecordedActivity">
+    <item
+        android:title="dd"
+        android:orderInCategory="100"
+        android:icon="@drawable/abc_ic_menu_moreoverflow_normal_holo_dark"
+        >
+        <menu xmlns:android="http://schemas.android.com/apk/res/android">
+            <item
+                android:id="@+id/rs_action_next"
+                android:title="下一班车"
+                android:orderInCategory="91"
+                android:icon="@drawable/abc_ic_go"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/rs_action_query"
+                android:title="查询数据"
+                android:orderInCategory="90"
+                android:icon="@drawable/abc_ic_search"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/rs_action_revoke"
+        android:title="@string/action_settings"
+        android:orderInCategory="90"
+        android:icon="@drawable/menu_revoke"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.subsurvey.dataShow.setting.ReverseSettingFragment">
+
+    <RelativeLayout
+        android:id="@+id/rsSettingTypeRL"
+        style="@style/settingStyle"
+        android:layout_alignParentTop="true"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/rsSettingTV_Type_tag"
+            style="@style/psTvStyleTag"
+            android:text="调查类型" />
+
+        <ImageView
+            android:id="@+id/rsSettingIV_Type"
+            style="@style/psIvStyle"
+            android:src="@drawable/botton_bg_arrowright" />
+
+        <TextView
+            android:id="@+id/rsSettingTV_Type"
+            style="@style/psTvStyle"
+            android:layout_toLeftOf="@+id/rsSettingIV_Type"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rsSettingLocRL"
+        style="@style/settingStyle"
+        android:layout_below="@+id/rsSettingTypeRL"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/rsSettingTV_loc_tag"
+            style="@style/psTvStyleTag"
+            android:text="车厢位置" />
+
+        <ImageView
+            android:id="@+id/rsSettingIV_loc"
+            style="@style/psIvStyle"
+            android:src="@drawable/botton_bg_arrowright" />
+
+        <TextView
+            android:id="@+id/rsSettingTV_loc"
+            style="@style/psTvStyle"
+            android:layout_toLeftOf="@+id/rsSettingIV_loc"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rsSettingDireRL"
+        android:layout_below="@+id/rsSettingLocRL"
+        style="@style/settingStyle"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/rsSettingTV_dire_tag"
+            style="@style/psTvStyleTag"
+            android:text="列车开往方向" />
+
+        <ImageView
+            android:id="@+id/rsSettingIV_dire"
+            style="@style/psIvStyle"
+            android:src="@drawable/botton_bg_arrowright" />
+
+        <TextView
+            android:id="@+id/rsSettingTV_dire"
+            style="@style/psTvStyle"
+            android:layout_toLeftOf="@+id/rsSettingIV_dire"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+    android:id="@+id/rsSettingPeriodRL"
+    android:layout_below="@+id/rsSettingDireRL"
+    style="@style/settingStyle"
+    android:clickable="true" >
+
+    <TextView
+        android:id="@+id/rsSettingTV_period_tag"
+        style="@style/psTvStyleTag"
+        android:text="出行时间段" />
+
+    <ImageView
+        android:id="@+id/rsSettingIV_period"
+        style="@style/psIvStyle"
+        android:src="@drawable/botton_bg_arrowright" />
+
+    <TextView
+        android:id="@+id/rsSettingTV_period"
+        style="@style/psTvStyle"
+        android:layout_toLeftOf="@+id/rsSettingIV_period"
+        />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rsSettingDataRL"
+        android:layout_below="@+id/rsSettingPeriodRL"
+        style="@style/settingStyle"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/rsSettingTV_data_tag"
+            style="@style/psTvStyleTag"
+            android:text="反向数据" />
+
+        <ImageView
+            android:id="@+id/rsSettingIV_data"
+            style="@style/psIvStyle"
+            android:src="@drawable/botton_bg_arrowright" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

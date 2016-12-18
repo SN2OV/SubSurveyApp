@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/odSettingCardNumRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/odSettingTV_cardNum_tag"
+                    style="@style/psTvStyleTag"
+                    android:text="卡号" />
+
+                <ImageView
+                    android:id="@+id/odSettingCardNumIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/odSettingTV_cardNum"
+                    style="@style/psTvStyle"
+                    android:layout_toLeftOf="@+id/odSettingCardNumIV" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/odSettingIDNumRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/odSettingTV_IDNum_tag"
+                    style="@style/psTvStyleTag"
+                    android:text="身份证号" />
+
+                <ImageView
+                    android:id="@+id/odSettingIDNumIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/odSettingTV_IDNum"
+                    style="@style/psTvStyle"
+                    android:layout_toLeftOf="@+id/odSettingIDNumIV" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/odSettingDistanceRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/odSettingTV_distance_tag"
+                    style="@style/psTvStyleTag"
+                    android:text="乘车距离" />
+
+                <ImageView
+                    android:id="@+id/odSettingDistanceIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/odSettingTV_distance"
+                    style="@style/psTvStyle"
+                    android:layout_toLeftOf="@+id/odSettingDistanceIV" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/odSettingStationCountRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/odSettingStationCountTagTV"
+                    style="@style/psTvStyleTag"
+                    android:text="乘车站数" />
+
+                <ImageView
+                    android:id="@+id/odSettingStationCountIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/odSettingStationCountTV"
+                    style="@style/psTvStyle"
+                    android:layout_toLeftOf="@+id/odSettingStationCountIV" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/odSettingTimePeriodRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/odSettingTimePeriodTagTV"
+                    style="@style/psTvStyleTag"
+                    android:text="出行时间段" />
+
+                <ImageView
+                    android:id="@+id/odSettingTimePeriodIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/odSettingTimePeriodTV"
+                    style="@style/psTvStyle"
+                    android:layout_toLeftOf="@+id/odSettingTimePeriodIV" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/odSettingTypeRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/odSettingTV_type_tag"
+                    style="@style/psTvStyleTag"
+                    android:text="路线类型" />
+
+                <ImageView
+                    android:id="@+id/odSettingTypeIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/odSettingTV_type"
+                    style="@style/psTvStyle"
+                    android:layout_toLeftOf="@+id/odSettingTypeIV"
+                    android:text="无换乘" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/odSettingLineRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/odSettingTV_line_tag"
+                    style="@style/psTvStyleTag"
+                    android:text="预设路线" />
+
+                <ImageView
+                    android:id="@+id/odSettingLineIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/odSettingTV_lineTV"
+                    style="@style/psTvStyle"
+                    android:layout_toLeftOf="@+id/odSettingLineIV" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/odSettingDataRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/odSettingTV_data_tag"
+                    style="@style/psTvStyleTag"
+                    android:text="OD数据" />
+
+                <ImageView
+                    android:id="@+id/odSettingDataIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/odSettingTV_data"
+                    style="@style/psTvStyle"
+                    android:layout_toLeftOf="@+id/wsSettingDataIV"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

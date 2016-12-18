@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.subsurvey"
+    android:installLocation="auto"
+    android:versionCode="2"
+    android:versionName="1.1">
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+
+    <android:user-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:user-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".AppContext"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:logo="@drawable/app_logo"
+        android:theme="@style/CustomActionBarTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".old.WalkSurveySettingActivity"
+            android:label="@string/title_activity_walk_survey"></activity>
+        <!-- <activity -->
+        <!-- android:name=".walkSurvey.ui.WalkTimeSurveyActivity" -->
+        <!-- android:label="@string/title_activity_walk_time_survey" > -->
+        <!-- </activity> -->
+        <activity
+            android:name=".old.WalkSurveyTimeRecordedActivity"
+            android:label="@string/title_activity_walk_survey_time"></activity>
+        <activity
+            android:name=".old.WalkSurveyDataPerActivity"
+            android:label="@string/title_activity_walk_survey_data_per"></activity>
+        <activity
+            android:name=".walkSurvey.ui.WalkSurveyDataTotalActivity"
+            android:label="@string/title_activity_walk_survey_data_total"></activity>
+        <activity
+            android:name=".old.StaySurveySettingActivity"
+            android:label="@string/title_activity_stay_survey_setting"></activity>
+        <activity
+            android:name=".old.StaySurveyTimeRecordedActivity"
+            android:label="@string/title_activity_stay_survey_time_recorded"></activity>
+        <activity
+            android:name=".old.StaySurveyDataPerActivity"
+            android:label="@string/title_activity_stay_survey_data_per"></activity>
+        <activity
+            android:name=".staySurvey.ui.StaySurveyDataTotalActivity"
+            android:label="@string/title_activity_stay_survey_data_total"></activity>
+        <activity
+            android:name=".old.ODSurveySettingActivity"
+            android:label="@string/title_activity_odsurvey_setting"></activity>
+        <activity
+            android:name=".old.ODSurveyTimeRecordedActivity"
+            android:label="@string/title_activity_odsurvey_time_recorded"></activity>
+        <activity
+            android:name=".old.ODSurveyDataPerActivity"
+            android:label="@string/title_activity_odsurvey_data_per"></activity>
+        <activity
+            android:name=".odSurvey.ui.ODSurveyDataTotalActivity"
+            android:label="@string/title_activity_odsurvey_data_total"
+            android:parentActivityName="android.support.v7.app.ActionBarActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.support.v7.app.ActionBarActivity" />
+        </activity>
+        <activity
+            android:name=".transferSurvey.ui.TransferSurveySettingActivity"
+            android:label="@string/title_activity_transfer_survey_setting"></activity>
+        <activity
+            android:name=".old.TransferSurveyTimeRecordedActivity"
+            android:label="@string/title_activity_transfer_survey_time_recorded"></activity>
+        <activity
+            android:name=".transferSurvey.ui.TransferSurveyDataTotalActivity"
+            android:label="@string/title_activity_transfer_survey_data_total"></activity>
+        <activity
+            android:name=".MainNewActivity"
+            android:label="@string/title_activity_main_new">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".personalSetting.PSWordActivity"
+            android:label="@string/title_activity_psname"></activity>
+        <activity
+            android:name=".transferSurvey.ui.TransferSurveyTimeRecordedNewActivity"
+            android:label="@string/title_activity_transfer_survey_time_recorded_new"></activity>
+        <!-- <activity -->
+        <!-- android:name=".dataShow.setting.TransferSettingFragment" -->
+        <!-- android:label="@string/title_activity_transfer_setting_fragment" > -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name=".dataShow.setting.WalkSettingFragment" -->
+        <!-- android:label="@string/title_activity_walk_setting_fragment" > -->
+        <!-- </activity> -->
+        <activity
+            android:name=".old.WSLineSettingActivity"
+            android:label="@string/title_activity_walk_line_setting_fragment"></activity>
+        <activity
+            android:name=".walkSurvey.ui.WalkSurveyNewTimeRecordeActivity"
+            android:label="@string/title_activity_walk_survey_new_time_recorde"></activity>
+        <activity
+            android:name=".walkSurvey.ui.WalkSurveyDataPerNewActivity"
+            android:label="@string/title_activity_walk_survey_data_per_new"></activity>
+        <activity
+            android:name=".walkSurvey.ui.WSInOutLineSettingActivity"
+            android:label="@string/title_activity_wsin_out_line_setting"></activity>
+        <activity
+            android:name=".walkSurvey.ui.WSWordActivity"
+            android:label="@string/title_activity_wsword"></activity>
+        <activity
+            android:name=".walkSurvey.ui.WSTransferLineSettingActivity"
+            android:label="@string/title_activity_wstransfer_line_setting"></activity>
+        <!-- <activity -->
+        <!-- android:name=".dataShow.setting.ODSettingFragment" -->
+        <!-- android:label="@string/title_activity_odsetting_fragment" > -->
+        <!-- </activity> -->
+        <activity
+            android:name=".odSurvey.ui.ODWordActivity"
+            android:label="@string/title_activity_odword"></activity>
+        <activity
+            android:name=".odSurvey.ui.ODLineSettingActivity"
+            android:label="@string/title_activity_odline_setting"></activity>
+        <activity
+            android:name=".odSurvey.ui.ODSurveyTimeRecordedNewActivity"
+            android:label="@string/title_activity_odsurvey_time_recorded_new"></activity>
+        <activity
+            android:name=".odSurvey.ui.ODSurveyDataPerNewActivity"
+            android:label="@string/title_activity_odsurvey_data_per_new"></activity>
+        <!-- <activity -->
+        <!-- android:name=".dataShow.setting.StaySettingFragment" -->
+        <!-- android:label="@string/title_activity_stay_setting_fragment" > -->
+        <!-- </activity> -->
+        <activity
+            android:name=".staySurvey.ui.SSWordActivity"
+            android:label="@string/title_activity_ssword"></activity>
+        <activity
+            android:name=".staySurvey.ui.SSLineSettingActivity"
+            android:label="@string/title_activity_stay_survey_line_setting"></activity>
+        <activity
+            android:name=".staySurvey.ui.StaySurveyTimeRecordedNewActivity"
+            android:label="@string/title_activity_stay_survey_time_recorded_new"></activity>
+        <!-- <activity -->
+        <!-- android:name=".DialogSSCount" -->
+        <!-- android:label="@string/title_activity_dialog_sscount" > -->
+        <!-- </activity> -->
+        <activity
+            android:name=".staySurvey.ui.StaySurveyDataPerNewActivity"
+            android:label="@string/title_activity_stay_survey_data_per_new"></activity>
+        <!-- <activity -->
+        <!-- android:name=".old.TestActivity" -->
+        <!-- android:label="@string/title_activity_test" > -->
+        <!-- </activity> -->
+        <activity
+            android:name=".reverseSurvey.ui.ReverseSurveyTimeRecordedActivity"
+            android:label="@string/title_activity_reverse_survey_time_recorded"></activity>
+        <activity
+            android:name=".reverseSurvey.ui.ReverseSurveyDataTotalActivity"
+            android:label="@string/title_activity_reverse_survey_data_total"></activity>
+        <activity android:name=".walkSurvey.ui.WSTransferLineSettingNewActivity"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

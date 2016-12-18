@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+    
+    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="horizontal" >
+         
+         <TextView
+             android:id="@+id/odIDTV"
+             android:layout_width="50dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odNameTV"
+             android:layout_width="60dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+          <TextView
+             android:id="@+id/odDateTV"
+             android:layout_width="90dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odCardNumTV"
+             android:layout_width="150dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odIDNoTV"
+             android:layout_width="180dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odStationTV"
+             android:layout_width="120dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odGetinStationLineTV"
+             android:layout_width="80dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odTransferCountTV"
+             android:layout_width="80dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odStationCountTV"
+             android:layout_width="80dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odDistanceTotalTV"
+             android:layout_width="80dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odWeekdayIfTV"
+             android:layout_width="100dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odPeakIfTV"
+             android:layout_width="100dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odGetinStationTimeTV"
+             android:layout_width="120dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odArriveStationTime1TV"
+             android:layout_width="140dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odTrainDire1TV"
+             android:layout_width="100dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odShift1TV"
+             android:layout_width="60dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odTrainStartingTime1TV"
+             android:layout_width="140dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odGetoffStation1TV"
+             android:layout_width="120dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odGetoffStationTime1TV"
+             android:layout_width="100dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odTransferLine1TV"
+             android:layout_width="100dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odArriveStationTime2TV"
+             android:layout_width="140dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odTrainDire2TV"
+             android:layout_width="100dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odShift2TV"
+             android:layout_width="60dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odTrainStartingTime2TV"
+             android:layout_width="140dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odGetoffStation2TV"
+             android:layout_width="120dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odGetoffStationTime2TV"
+             android:layout_width="100dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odTransferLine2TV"
+             android:layout_width="100dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+          <TextView
+             android:id="@+id/odArriveStationTime3TV"
+             android:layout_width="140dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odTrainDire3TV"
+             android:layout_width="100dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odShift3TV"
+             android:layout_width="60dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odTrainStartingTime3TV"
+             android:layout_width="140dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odGetoffStation3TV"
+             android:layout_width="120dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odGetoffStationTime3TV"
+             android:layout_width="100dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+         <TextView
+             android:id="@+id/odGetoutStationTimeTV"
+             android:layout_width="120dp"
+             style = "@style/InfoTextViewStyle" />
+
+         <View style="@style/vertical_layout" />
+         
+    </LinearLayout>
+    
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/odline_info"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@drawable/ws_line_info"
+        android:title="路线信息"/>
+    <item
+        android:id="@+id/odline_change"
+        android:orderInCategory="90"
+        app:showAsAction="always"
+        android:icon="@drawable/ws_change_line"
+        android:title="更改线路"/>
+
+</menu>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    	<LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_alignParentTop="true"
+             android:orientation="vertical" >
+             
+    	      <RelativeLayout
+            android:id="@+id/wsLineSettingGetOffDireRL"
+            style="@style/settingStyle"
+            android:layout_alignParentTop="true"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsLineSettingTV_offDire_tag"
+                style="@style/psTvStyleTag"
+                android:text="下车线路方向" />
+
+            <ImageView
+                android:id="@+id/wsLineSettingOffDireIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsLineSettingTV_offDire"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsLineSettingOffDireIV"
+                android:text="苹果园" />
+
+        </RelativeLayout>
+        
+   	    <RelativeLayout
+            android:id="@+id/wsLineSettingGetOffLineRL"
+            android:layout_below="@+id/wsLineSettingGetOffDireRL"
+            style="@style/settingStyle"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsLineSettingTV_offLine_tag"
+                style="@style/psTvStyleTag"
+                android:text="下车线路" />
+
+            <ImageView
+                android:id="@+id/wsLineSettingOffLineIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsLineSettingTV_offLine"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsLineSettingOffLineIV"
+                android:text="1号线" />
+        </RelativeLayout>
+
+   	    <RelativeLayout
+            android:id="@+id/wsLineSettingGateLocRL"
+            style="@style/settingStyle"
+            android:layout_below="@+id/wsLineSettingGetOffLineRL"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsLineSettingTV_gateLoc_tag"
+                style="@style/psTvStyleTag"
+                android:text="闸机位置" />
+
+            <ImageView
+                android:id="@+id/wsLineSettingGateLocIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsLineSettingTV_gateLoc"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsLineSettingGateLocIV"
+                android:text="A" />
+        </RelativeLayout>
+        
+   	     <RelativeLayout
+            android:id="@+id/wsLineSettingGateLineRL"
+            style="@style/settingStyle"
+            android:layout_below="@+id/wsLineSettingGateLocRL"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsLineSettingTV_gateLine_tag"
+                style="@style/psTvStyleTag"
+                android:text="闸机所属线路" />
+
+            <ImageView
+                android:id="@+id/wsLineSettingGateLineIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsLineSettingTV_gateLine"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsLineSettingGateLineIV"
+                android:text="1号线" />
+        </RelativeLayout>
+        
+   	    <RelativeLayout
+            android:id="@+id/wsLineSettingGetOnDireRL"
+            style="@style/settingStyle"
+            android:layout_below="@+id/wsLineSettingGateLineRL"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsLineSettingTV_getOnDire_tag"
+                style="@style/psTvStyleTag"
+                android:text="上车线路方向" />
+
+            <ImageView
+                android:id="@+id/wsLineSettingGetOnDireIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsLineSettingTV_getOnDire"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsLineSettingGetOnDireIV"
+                android:text="四惠东" />
+        </RelativeLayout>
+        
+   	    <RelativeLayout
+            android:id="@+id/wsLineSettingGetOnLineRL"
+            style="@style/settingStyle"
+            android:layout_below="@+id/wsLineSettingGetOnDireRL"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/wsLineSettingTV_onLine_tag"
+                style="@style/psTvStyleTag"
+                android:text="上车线路" />
+
+            <ImageView
+                android:id="@+id/wsLineSettingGetOnLineIV"
+                style = "@style/psIvStyle"/>
+
+            <TextView
+                android:id="@+id/wsLineSettingTV_getOnLine"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/wsLineSettingGetOnLineIV"
+                android:text="1号线" />
+        </RelativeLayout>
+        </LinearLayout>
+
+   	 
+    
+
+</RelativeLayout>

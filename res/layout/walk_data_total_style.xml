@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+     >
+     <LinearLayout
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"   
+      >
+  <TextView  
+   android:layout_width="50dp"
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsID"  
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"
+   android:padding="5dp"
+   android:singleLine="true"
+  /> 
+  <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="60dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsName" 
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"
+   android:textColor="@color/black" 
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="90dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsDate" 
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+ <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="80dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsStation"
+   android:textColor="@color/black"  
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="80dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsLine" 
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal" 
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="100dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsWeekday" 
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal" 
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="100dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsTravelTime"  
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="80dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsWalkType" 
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal" 
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="100dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsAge"  
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+
+   <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/wsSex"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="5dp"
+        android:singleLine="true"
+        />
+   <View style="@style/vertical_layout"/>
+
+
+  <TextView  
+   android:layout_width="80dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsBagagetype"
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"  
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+
+  <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/wsTelConcern"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="5dp"
+        android:singleLine="true"
+        />
+  <View style="@style/vertical_layout"/>
+
+  <TextView  
+   android:layout_width="80dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsWalkTool"  
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+
+  <TextView
+       android:layout_width="80dp"
+       android:layout_height="wrap_content"
+       android:id="@+id/wsSpeed"
+       android:textColor="@color/black"
+       android:textSize="16dp"
+       android:gravity="center_vertical|center_horizontal"
+       android:padding="5dp"
+       android:singleLine="true"
+       />
+  <View style="@style/vertical_layout"/>
+
+  <TextView  
+   android:layout_width="80dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsGetOffLine"  
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="120dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsGetOffDire"  
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="120dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsOpenDoorTime1" 
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal" 
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="120dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsMachineLine"  
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="80dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsMachineLoc"  
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="120dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsGotoPlatformTime" 
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal" 
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="80dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsGetOnLine"  
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="120dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsGetOnDire"  
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+  <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="120dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsArrivePlatformTime"  
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"
+   android:padding="5dp"
+   android:singleLine="true"
+  />  
+ <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="120dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsOpenDoorTime2"  
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"
+   android:padding="5dp"
+   android:singleLine="true"
+  /> 
+  <View style="@style/vertical_layout"/>
+  <TextView  
+   android:layout_width="120dp"  
+   android:layout_height="wrap_content"  
+   android:id="@+id/wsGooutPlatformTime"  
+   android:textColor="@color/black"
+   android:textSize="16dp"
+   android:gravity="center_vertical|center_horizontal"
+   android:padding="5dp"
+   android:singleLine="true"
+  />
+ </LinearLayout>
+	<View style="@style/horizontal_layout"/>
+</LinearLayout>

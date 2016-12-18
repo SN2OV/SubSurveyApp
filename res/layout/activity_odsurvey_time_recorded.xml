@@ -1,0 +1,197 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/main_backgroud"
+    tools:context=".ODSurveyTimeRecordedActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/odSurveyTrainDireRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/odSurveyTrainDireTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="列车方向："
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/odSurveyTrainDireET"
+                style="@style/SurveyEditTextStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/odSurveyTrainDireTV"
+                 >
+
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/odSurveyShiftRL"
+            style="@style/ODSurveyTimeRecordedListViewStyle"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/odSurveyShiftTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="乘车班次："
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/odSurveyShiftET"
+                style="@style/SurveyEditTextStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/odSurveyShiftTV"
+                android:text="1"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/odSurveyGetoffStationRL"
+            style="@style/ODSurveyTimeRecordedListViewStyle"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/odSurveyGetoffStationTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="下车站："
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/odSurveyGetoffStationET"
+                style="@style/SurveyEditTextStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/odSurveyGetoffStationTV"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/odSurveyTransferLineRL"
+            style="@style/ODSurveyTimeRecordedListViewStyle" >
+
+            <TextView
+                android:id="@+id/odSurveyTransferLineTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="换入线路："
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/odSurveyTransferLineET"
+                style="@style/SurveyEditTextStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/odSurveyTransferLineTV"
+                 />
+        </RelativeLayout>
+        
+    </LinearLayout>
+		<RelativeLayout
+		    android:layout_above="@+id/odSurveyLastInfoRL"
+		    android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+             >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="即将记录"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/odSurveyTodoNextTV"
+                android:layout_marginBottom="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="#ffff0000"
+                android:textSize="40dp" />
+        </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <ImageView
+            android:id="@+id/odSurveyStartImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/start_survey_selector" />
+
+        <ImageView
+            android:id="@+id/odSurveySearchImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/search_survey_selector" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/odSurveyLastInfoRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout1"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/TextView04"
+            android:layout_marginBottom="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="上一时刻"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/odSurveyLastInfoTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:layout_below="@+id/TextView04"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="#ffff0000"
+            android:textSize="40dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

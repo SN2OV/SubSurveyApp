@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="vertical" >
+            
+              <ImageView
+                android:contentDescription="@string/app_name"
+                android:id="@+id/imageView_name_bg"
+                style="@style/background"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/tv_name_tag"
+                style="@style/psTvStyleTag"
+                android:layout_alignLeft="@+id/imageView_name_bg"
+                android:layout_alignTop="@+id/imageView_name_bg"
+                android:text="姓名"
+                 />
+
+             <TextView
+                 android:id="@+id/textView_name"
+                 style = "@style/psTvStyle"
+                 android:layout_alignBaseline="@+id/tv_name_tag"
+                 android:layout_alignBottom="@+id/tv_name_tag"
+                 android:layout_alignRight="@+id/imageView_name_bg"
+                 android:text="刘笑凡"
+                  />
+
+             <ImageView
+                 android:id="@+id/imageView_date_bg"
+                 style="@style/background"
+                 android:layout_width="fill_parent"
+                 android:layout_height="60dp"
+                 android:layout_below="@+id/imageView_name_bg"
+                 android:layout_margin="5dp" />
+             <TextView
+                android:id="@+id/tv_date_tag"
+                style="@style/psTvStyleTag"
+                android:layout_alignLeft="@+id/imageView_date_bg"
+                android:layout_alignTop="@+id/imageView_date_bg"
+                android:text="调查日期"
+                />
+
+             <TextView
+                 android:id="@+id/textView_date"
+                 style = "@style/psTvStyle"
+                 android:layout_alignBaseline="@+id/tv_date_tag"
+                 android:layout_alignBottom="@+id/tv_date_tag"
+                 android:layout_alignRight="@+id/imageView_date_bg"
+                 android:text="2015-12-12"
+                  />
+             
+              <ImageView
+                 android:id="@+id/imageView_station_bg"
+                 style="@style/background"
+                 android:layout_width="fill_parent"
+                 android:layout_height="60dp"
+                 android:layout_below="@+id/imageView_date_bg"
+                 android:layout_margin="5dp" />
+             <TextView
+                android:id="@+id/tv_station_tag"
+                style="@style/psTvStyleTag"
+                android:layout_alignLeft="@+id/imageView_station_bg"
+                android:layout_alignTop="@+id/imageView_station_bg"
+                android:text="调查车站名称"
+                />
+
+             <TextView
+                 android:id="@+id/textView_station"
+                 style = "@style/psTvStyle"
+                 android:layout_alignBaseline="@+id/tv_station_tag"
+                 android:layout_alignBottom="@+id/tv_station_tag"
+                 android:layout_alignRight="@+id/imageView_station_bg"
+                 android:text="知春路"
+                  />
+             
+              <ImageView
+                 android:id="@+id/imageView_line_bg"
+                 style="@style/background"
+                 android:layout_width="fill_parent"
+                 android:layout_height="60dp"
+                 android:layout_below="@+id/imageView_station_bg"
+                 android:layout_margin="5dp" />
+             <TextView
+                android:id="@+id/tv_line_tag"
+                style="@style/psTvStyleTag"
+                android:layout_alignLeft="@+id/imageView_line_bg"
+                android:layout_alignTop="@+id/imageView_line_bg"
+                android:text="所属线路"
+                />
+
+             <TextView
+                 android:id="@+id/textView_line"
+                 style = "@style/psTvStyle"
+                 android:layout_alignBaseline="@+id/tv_line_tag"
+                 android:layout_alignBottom="@+id/tv_line_tag"
+                 android:layout_alignRight="@+id/imageView_line_bg"
+                 android:text="10号线"
+                  />
+             
+              <ImageView
+                 android:id="@+id/imageView_weekday_bg"
+                 style="@style/background"
+                 android:layout_width="fill_parent"
+                 android:layout_height="60dp"
+                 android:layout_below="@+id/imageView_line_bg"
+                 android:layout_margin="5dp" />
+             <TextView
+                android:id="@+id/tv_weekday_tag"
+                style="@style/psTvStyleTag"
+                android:layout_alignLeft="@+id/imageView_weekday_bg"
+                android:layout_alignTop="@+id/imageView_weekday_bg"
+                android:text="是否工作日"
+                />
+
+             <TextView
+                 android:id="@+id/textView_weekday"
+                 style = "@style/psTvStyle"
+                 android:layout_alignBaseline="@+id/tv_weekday_tag"
+                 android:layout_alignBottom="@+id/tv_weekday_tag"
+                 android:layout_alignRight="@+id/imageView_weekday_bg"
+                 android:text="是"
+                  />
+            
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

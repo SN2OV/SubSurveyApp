@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StaySettingFragment" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            <RelativeLayout
+                android:id="@+id/staySettingCarriageLocRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/staySettingCarriageLocTagTV"
+                    style="@style/psTvStyleTag"
+                    android:text="车厢位置" />
+
+                <ImageView
+                    android:id="@+id/staySettingCarriageLocIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/staySettingCarriageLocTV"
+                    style="@style/psTvStyle"
+                    android:layout_toLeftOf="@+id/staySettingCarriageLocIV" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/staySettingTimePeriodRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/staySettingTimePeriodTagTV"
+                    style="@style/psTvStyleTag"
+                    android:text="出行时间段" />
+
+                <ImageView
+                    android:id="@+id/staySettingTimePeriodIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/staySettingTimePeriodTV"
+                    style="@style/psTvStyle"
+                    android:text="平峰"
+                    android:layout_toLeftOf="@+id/staySettingTimePeriodIV" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/staySettingTypeRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/staySettingTypeTagTV"
+                    style="@style/psTvStyleTag"
+                    android:text="类型" />
+
+                <ImageView
+                    android:id="@+id/staySettingTypeIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/staySettingTypeTV"
+                    style="@style/psTvStyle"
+                    android:text="进站"
+                    android:layout_toLeftOf="@+id/staySettingTypeIV" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/staySettingLineRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/staySettingLineTagTV"
+                    style="@style/psTvStyleTag"
+                    android:text="预设路线" />
+
+                <ImageView
+                    android:id="@+id/staySettingLineIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/staySettingLineTV"
+                    style="@style/psTvStyle"
+                    android:layout_toLeftOf="@+id/staySettingLineIV" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/staySettingDataRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/staySettingDataTagTV"
+                    style="@style/psTvStyleTag"
+                    android:text="留乘数据" />
+
+                <ImageView
+                    android:id="@+id/staySettingDataIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/staySettingDataTV"
+                    style="@style/psTvStyle"
+                    android:layout_toLeftOf="@+id/staySettingDataIV" />
+            </RelativeLayout>
+            
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

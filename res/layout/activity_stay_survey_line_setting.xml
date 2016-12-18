@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SSLineSettingActivity" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+         >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            <RelativeLayout
+            	android:id="@+id/sslSettingFromLineRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/sslSettingFromLineTagTV"
+                    style="@style/psTvStyleTag"
+                    android:text="来自线路" />
+
+                <ImageView
+                    android:id="@+id/sslSettingFromLineIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/sslSettingFromLineTV"
+                    style="@style/psTvStyle"
+                    android:layout_toLeftOf="@+id/sslSettingFromLineIV" />
+            </RelativeLayout>
+
+            <RelativeLayout
+            	android:id="@+id/sslSettingFromLocRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/sslSettingFromLocTagTV"
+                    style="@style/psTvStyleTag"
+                    android:text="来自方向/闸机位置" />
+
+                <ImageView
+                    android:id="@+id/sslSettingFromLocIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/sslSettingFromLocTV"
+                    style="@style/psTvStyle"
+                    android:layout_toLeftOf="@+id/sslSettingFromLocIV" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+            	android:id="@+id/sslSettingToLineRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/sslSettingToLineTagTV"
+                    style="@style/psTvStyleTag"
+                    android:text="前往线路" />
+
+                <ImageView
+                    android:id="@+id/sslSettingToLineIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/sslSettingToLineTV"
+                    style="@style/psTvStyle"
+                    android:layout_toLeftOf="@+id/sslSettingToLineIV" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+            	android:id="@+id/sslSettingToLocRL"
+                style="@style/settingStyle"
+                android:layout_width="match_parent"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/sslSettingToLocTagTV"
+                    style="@style/psTvStyleTag"
+                    android:text="前往方向/闸机位置 " />
+
+                <ImageView
+                    android:id="@+id/sslSettingToLocIV"
+                    style="@style/psIvStyle" />
+
+                <TextView
+                    android:id="@+id/sslSettingToLocTV"
+                    style="@style/psTvStyle"
+                    android:layout_toLeftOf="@+id/sslSettingToLocIV" />
+            </RelativeLayout>
+            
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

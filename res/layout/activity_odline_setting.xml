@@ -1,0 +1,193 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+         <ScrollView
+             android:id="@+id/scrollView1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+              android:scrollbars="none"  >
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="vertical" >
+
+                 <RelativeLayout
+                     android:id="@+id/odlSettingDir1RL"
+                     style="@style/settingStyle"
+                     android:layout_width="match_parent"
+                     android:clickable="true" >
+
+                     <TextView
+                         android:id="@+id/odlSettingDir1TagTV"
+                         style="@style/psTvStyleTag"
+                         android:text="①方向" />
+
+                     <ImageView
+                         android:id="@+id/odlSettingDir1IV"
+                         style="@style/psIvStyle" />
+
+                     <TextView
+                         android:id="@+id/odlSettingDir1TV"
+                         style="@style/psTvStyle"
+                         android:layout_toLeftOf="@+id/odlSettingDir1IV" />
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/odlSettingOffStation1RL"
+                     style="@style/settingStyle"
+                     android:layout_width="match_parent"
+                     android:clickable="true" >
+
+                     <TextView
+                         android:id="@+id/odlSettingOffStation1TagTV"
+                         style="@style/psTvStyleTag"
+                         android:text="①下车站" />
+
+                     <ImageView
+                         android:id="@+id/odlSettingOffStation1IV"
+                         style="@style/psIvStyle" />
+
+                     <TextView
+                         android:id="@+id/odlSettingOffStation1TV"
+                         style="@style/psTvStyle"
+                         android:layout_toLeftOf="@+id/odlSettingOffStation1IV" />
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/odlSettingTranLine2RL"
+                     style="@style/settingStyle"
+                     android:layout_width="match_parent"
+                     android:clickable="true" >
+
+                     <TextView
+                         android:id="@+id/odlSettingTranLine2TagTV"
+                         style="@style/psTvStyleTag"
+                         android:text="②换入线路" />
+
+                     <ImageView
+                         android:id="@+id/odlSettingTranLine2IV"
+                         style="@style/psIvStyle" />
+
+                     <TextView
+                         android:id="@+id/odlSettingTranLine2TV"
+                         style="@style/psTvStyle"
+                         android:layout_toLeftOf="@+id/odlSettingTranLine2IV" />
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/odlSettingDire2RL"
+                     style="@style/settingStyle"
+                     android:layout_width="match_parent"
+                     android:clickable="true" >
+
+                     <TextView
+                         android:id="@+id/odlSettingDire2TagTV"
+                         style="@style/psTvStyleTag"
+                         android:text="②方向" />
+
+                     <ImageView
+                         android:id="@+id/odlSettingDire2IV"
+                         style="@style/psIvStyle" />
+
+                     <TextView
+                         android:id="@+id/odlSettingDire2TV"
+                         style="@style/psTvStyle"
+                         android:layout_toLeftOf="@+id/odlSettingDire2IV" />
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/odlSettingOffStation2RL"
+                     style="@style/settingStyle"
+                     android:layout_width="match_parent"
+                     android:clickable="true" >
+
+                     <TextView
+                         android:id="@+id/odlSettingOffStation2TagTV"
+                         style="@style/psTvStyleTag"
+                         android:text="②下车站" />
+
+                     <ImageView
+                         android:id="@+id/odlSettingOffStation2IV"
+                         style="@style/psIvStyle" />
+
+                     <TextView
+                         android:id="@+id/odlSettingOffStation2TV"
+                         style="@style/psTvStyle"
+                         android:layout_toLeftOf="@+id/odlSettingOffStation2IV" />
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/odlSettingTransLine3RL"
+                     style="@style/settingStyle"
+                     android:layout_width="match_parent"
+                     android:visibility="gone"
+                     android:clickable="true" >
+
+                     <TextView
+                         android:id="@+id/odlSettingTransLine3TagTV"
+                         style="@style/psTvStyleTag"
+                         android:text="③换入线路" />
+
+                     <ImageView
+                         android:id="@+id/odlSettingTransLine3IV"
+                         style="@style/psIvStyle" />
+
+                     <TextView
+                         android:id="@+id/odlSettingTransLine3TV"
+                         style="@style/psTvStyle"
+                         android:layout_toLeftOf="@+id/odlSettingTransLine3IV" />
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/odlSettingDire3RL"
+                     style="@style/settingStyle"
+                     android:layout_width="match_parent"
+                     android:visibility="gone"
+                     android:clickable="true" >
+
+                     <TextView
+                         android:id="@+id/odlSettingDire3TagTV"
+                         style="@style/psTvStyleTag"
+                         android:text="③方向" />
+
+                     <ImageView
+                         android:id="@+id/odlSettingDire3IV"
+                         style="@style/psIvStyle" />
+
+                     <TextView
+                         android:id="@+id/odlSettingDire3TV"
+                         style="@style/psTvStyle"
+                         android:layout_toLeftOf="@+id/odlSettingDire3IV" />
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/odlSettingOffStation3RL"
+                     style="@style/settingStyle"
+                     android:layout_width="match_parent"
+                     android:visibility="gone"
+                     android:clickable="true" >
+
+                     <TextView
+                         android:id="@+id/odlSettingOffStation3TagTV"
+                         style="@style/psTvStyleTag"
+                         android:text="③下车站" />
+
+                     <ImageView
+                         android:id="@+id/odlSettingOffStation3IV"
+                         style="@style/psIvStyle" />
+
+                     <TextView
+                         android:id="@+id/odlSettingOffStation3TV"
+                         style="@style/psTvStyle"
+                         android:layout_toLeftOf="@+id/odlSettingOffStation3IV" />
+                 </RelativeLayout>
+             </LinearLayout>
+
+         </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,177 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".StaySurveyTimeRecordedNewActivity" >
+
+    <RelativeLayout
+        android:id="@+id/ssBagageRL"
+        android:layout_below="@+id/ssAgeRL"
+        style = "@style/spinRLStyle">
+
+        <TextView
+            android:id="@+id/ssBagagePreTV"
+            android:text="行李类型"
+        	style = "@style/spinTVTagStyle"
+		 />
+
+        <TextView
+            android:id="@+id/ssBagageValueTV"
+            android:text="无行李"
+            android:layout_toRightOf="@+id/ssBagagePreTV"
+            style = "@style/spinTVValueStyle"
+             />
+
+        <ImageButton
+            android:id="@+id/ssBagageValueIV"
+            style = "@style/spinIVStyle"
+             />
+    </RelativeLayout>
+<RelativeLayout
+        android:id="@+id/ssSexRL"
+        android:layout_below="@+id/ssBagageRL"
+        style = "@style/spinRLStyle">
+
+        <TextView
+            android:id="@+id/ssSexPreTV"
+            android:text="性        别"
+        	style = "@style/spinTVTagStyle"
+		 />
+
+        <TextView
+            android:id="@+id/ssSexValueTV"
+            android:text="男"
+            android:layout_toRightOf="@+id/ssSexPreTV"
+            style = "@style/spinTVValueStyle"
+             />
+
+        <ImageButton
+            android:id="@+id/ssSexValueIV"
+            style = "@style/spinIVStyle"
+             />
+    </RelativeLayout>
+<RelativeLayout
+         android:id="@+id/ssAgeRL"
+         style="@style/spinRLStyle"
+         android:layout_alignLeft="@+id/ssBagageRL"
+         android:layout_below="@+id/ssLineShowTV"
+          >
+
+         <TextView
+             android:id="@+id/ssAgePreTV"
+             style="@style/spinTVTagStyle"
+             android:text="乘客年龄" />
+
+         <TextView
+             android:id="@+id/ssAgeValueTV"
+             style="@style/spinTVValueStyle"
+             android:layout_toRightOf="@+id/ssAgePreTV"
+             android:text="青年" />
+
+         <ImageButton
+             android:id="@+id/ssAgeValueIV"
+             style="@style/spinIVStyle" />
+     </RelativeLayout>
+<RelativeLayout
+         android:id="@+id/ssRecordedRL"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_below="@+id/ssSexRL"
+         android:layout_marginTop="10dp"
+         android:background="@drawable/record_background" >
+
+         <RelativeLayout
+             android:id="@+id/ssImagesRL"
+             android:layout_below="@+id/ssLastTimeRL"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" >
+
+             <ImageView
+                 android:id="@+id/startSurveyImageView"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_marginLeft="40dp"
+                 android:src="@drawable/start_survey" />
+
+             <ImageView
+                 android:id="@+id/searchSurveyImageView"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginRight="40dp"
+                 android:src="@drawable/search_survey" />
+         </RelativeLayout>
+
+         <RelativeLayout
+             android:id="@+id/ssTodoRL"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+             android:layout_marginTop="5dp" >
+
+             <TextView
+                 android:id="@+id/ssTodoNextTagTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:gravity="center"
+                 android:text="即将记录"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:id="@+id/ssTodoNextTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/ssTodoNextTagTV"
+                 android:layout_centerHorizontal="true"
+                 android:layout_centerVertical="true"
+                 android:text=""
+                 android:textColor="@color/themeBlue"
+                 android:textSize="40dp" />
+         </RelativeLayout>
+
+         <RelativeLayout
+             android:id="@+id/ssLastTimeRL"
+             android:layout_below="@+id/ssTodoRL"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" >
+
+             <TextView
+                 android:id="@+id/ssLastTimeTagTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:text="上一时刻"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:id="@+id/ssLastTimeTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/ssLastTimeTagTV"
+                 android:layout_centerHorizontal="true"
+                 android:textColor="@color/themeBlue"
+                 android:text=""
+                 android:textSize="40dp" />
+         </RelativeLayout>
+
+     </RelativeLayout>
+<TextView
+         android:id="@+id/ssLineShowTV"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="1dp"
+         android:gravity="center"
+         android:text="c-四惠东"
+         android:textColor="@color/red"
+         android:textSize="18sp" />
+</RelativeLayout>

@@ -1,0 +1,255 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ODSurveyDataPerNewActivity" >
+
+<ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        <RelativeLayout
+            android:id="@+id/odPerGotoPlatform1RL"
+            style="@style/settingStyle"
+            android:layout_width="match_parent"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/odPerGotoPlatform1TagTV"
+                style="@style/psTvStyleTag"
+                android:text="进站刷卡时刻" />
+
+            <ImageView
+                android:id="@+id/odPerGotoPlatform1IV"
+                style="@style/psIvStyle" />
+
+            <TextView
+                android:id="@+id/odPerGotoPlatform1TV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/odPerGotoPlatform1IV" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/odPerArrivePlatform1RL"
+            style="@style/settingStyle"
+            android:layout_width="match_parent"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/odPerArrivePlatform1TagTV"
+                style="@style/psTvStyleTag"
+                android:text="到达站台时刻①" />
+
+            <ImageView
+                android:id="@+id/odPerArrivePlatform1IV"
+                style="@style/psIvStyle" />
+
+            <TextView
+                android:id="@+id/odPerArrivePlatform1TV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/odPerArrivePlatform1IV" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/odPerTrainStart1RL"
+            style="@style/settingStyle"
+            android:layout_width="match_parent"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/odPerTrainStart1TagTV"
+                style="@style/psTvStyleTag"
+                android:text="列车开行时刻①" />
+
+            <ImageView
+                android:id="@+id/odPerTrainStart1IV"
+                style="@style/psIvStyle" />
+
+            <TextView
+                android:id="@+id/odPerTrainStart1TV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/odPerTrainStart1IV" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/odPerGetOff1RL"
+            style="@style/settingStyle"
+            android:layout_width="match_parent"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/odPerGetOff1TagTV"
+                style="@style/psTvStyleTag"
+                android:text="下车时刻①" />
+
+            <ImageView
+                android:id="@+id/odPerGetOff1IV"
+                style="@style/psIvStyle" />
+
+            <TextView
+                android:id="@+id/odPerGetOff1TV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/odPerGetOff1IV" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/odPerArrivePlatform2RL"
+            style="@style/settingStyle"
+            android:layout_width="match_parent"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/odPerArrivePlatform2TagTV"
+                style="@style/psTvStyleTag"
+                android:text="到达站台时刻②" />
+
+            <ImageView
+                android:id="@+id/odPerArrivePlatform2IV"
+                style="@style/psIvStyle" />
+
+            <TextView
+                android:id="@+id/odPerArrivePlatform2TV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/odPerArrivePlatform2IV" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/odPerTrainStart2RL"
+            style="@style/settingStyle"
+            android:layout_width="match_parent"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/odPerTrainStart2TagTV"
+                style="@style/psTvStyleTag"
+                android:text="列车开行时刻②" />
+
+            <ImageView
+                android:id="@+id/odPerTrainStart2IV"
+                style="@style/psIvStyle" />
+
+            <TextView
+                android:id="@+id/odPerTrainStart2TV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/odPerTrainStart2IV" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/odPerGetOff2RL"
+            style="@style/settingStyle"
+            android:layout_width="match_parent"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/odPerGetOff2TagTV"
+                style="@style/psTvStyleTag"
+                android:text="下车时刻②" />
+
+            <ImageView
+                android:id="@+id/odPerGetOff2IV"
+                style="@style/psIvStyle" />
+
+            <TextView
+                android:id="@+id/odPerGetOff2TV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/odPerGetOff2IV" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/odPerArrivePlatform3RL"
+            style="@style/settingStyle"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/odPerArrivePlatform3TagTV"
+                style="@style/psTvStyleTag"
+                android:text="到达站台时刻③" />
+
+            <ImageView
+                android:id="@+id/odPerArrivePlatform3IV"
+                style="@style/psIvStyle" />
+
+            <TextView
+                android:id="@+id/odPerArrivePlatform3TV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/odPerArrivePlatform3IV" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/odPerTrainStart3RL"
+            style="@style/settingStyle"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/odPerTrainStart3TagTV"
+                style="@style/psTvStyleTag"
+                android:text="列车开行时刻③" />
+
+            <ImageView
+                android:id="@+id/odPerTrainStart3IV"
+                style="@style/psIvStyle" />
+
+            <TextView
+                android:id="@+id/odPerTrainStart3TV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/odPerTrainStart3IV" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/odPerGetOff3RL"
+            style="@style/settingStyle"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/odPerGetOff3TagTV"
+                style="@style/psTvStyleTag"
+                android:text="下车时刻③" />
+
+            <ImageView
+                android:id="@+id/odPerGetOff3IV"
+                style="@style/psIvStyle" />
+
+            <TextView
+                android:id="@+id/odPerGetOff3TV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/odPerGetOff3IV" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/odPerGoOutPlatFormRL"
+            style="@style/settingStyle"
+            android:layout_width="match_parent"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/odPerGoOutPlatFormTagTV"
+                style="@style/psTvStyleTag"
+                android:text="出站刷卡时刻" />
+
+            <ImageView
+                android:id="@+id/odPerGoOutPlatFormIV"
+                style="@style/psIvStyle" />
+
+            <TextView
+                android:id="@+id/odPerGoOutPlatFormTV"
+                style="@style/psTvStyle"
+                android:layout_toLeftOf="@+id/odPerGoOutPlatFormIV" />
+        </RelativeLayout>
+
+    
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
